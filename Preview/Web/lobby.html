@@ -1,0 +1,239 @@
+<!-- saved from url=(0091)http://www500vip.com/index/common.html#_url_%3D%2Findex%2Flobby.html%3F_isOpenWin%3Dlottery -->
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=yes">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www500vip.com/500vip/statics/images/favicon.ico" media="screen">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/popups_model.css" />
+    <link rel="stylesheet" type="text/css" href="./skin/css/skin.css" />
+    <!--[if lte IE 8]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 7]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 6]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+
+    <link rel="stylesheet" href="mc/v.1.0.0/mc_lotto.css"/>
+    <link rel="stylesheet" href="mc/v.1.0.0/mc_icon.css"/>
+    <link rel="stylesheet" href="ac/v.1.0.0/ac_lotto.css"/>
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/jqueryui/1.9.2/themes/vader/jquery-ui.css" />
+    <link rel="stylesheet" href="common/v.1.0.0/dialog_box.css"/>
+    <link media="all" href="css/500vip-icomoon.css" type="text/css" rel="stylesheet" />
+    
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-i18n/1.1.1/jquery.i18n.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="common/v.1.0.0/jquery-ui-timepicker.js"></script>
+    <script src="http://apps.bdimg.com/libs/chosen/1.1.0/chosen.jquery.js"></script>
+</head>
+<body class="bettingCh">
+    <!-- 下面是预加载的loading效果 -->
+    <div id="_tip_loading_" style="display: none;">
+        <div>
+            <img src="./images/loading.gif">
+            <br>
+            <span>加载中,请稍后</span>
+        </div>
+    </div>
+    <!-- end:  '#_tip_loading_'  -->
+    <!-- 这里是页面正文开始 -->
+    <div id="_body_div" class="main-wrap clearfix bettingWrap" style="width:100%;">
+        <!-- 以下是 menu -->
+        <div id="live-menu-wrap" class="live-menu-wrap clearfix">
+            <div class="live-logo"></div>
+            <div>
+                <!-- 左边的彩种 menu -->
+                <div id="live-main-list" class="live-main-list mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" style="height: 830px; overflow: visible;">
+                    <div id="mCSB_1" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" tabindex="0" style="max-height: 880px;">
+                        <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                            <div class="live-nav" style="top: 0px;">
+                                <div onclick="" id="gameLobby" class="main-tit"><i class="icon-hall-icon"></i><span class="">购彩大厅</span></div>
+                                <i class="icon-refresh-icon" onclick="fresh_all_lottery()"></i>
+                            </div>
+                            <div id="hot_lottery" class="live-nav toggleMenu" style="top: 0px;">
+                                <div class="main-tit"><i class="icon-attr-up"></i><a><i class="icon-star-icon"></i><span class="lot-text">热门彩种</span></a></div>
+                                <ul class="gao-ul">
+                                    <li class="nav-li lot51" data-sort="1"><a id="hot_main-item-51" class="nav-btn cur-btn" data-argsid="51" title="三分时时彩" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;)"><i></i><span class="lot-text">获取游戏中...</span></a></li>
+                                    <li class="nav-li lot5" data-sort="2"><a id="hot_main-item-5" class="nav-btn cur-btn" data-argsid="5" title="重庆时时彩" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;)"><i></i><span class="lot-text">获取游戏中...</span></a></li>
+                                    <li class="nav-li lot9" data-sort="3"><a id="hot_main-item-9" class="nav-btn cur-btn" data-argsid="9" title="北京PK拾" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;)"><i></i><span class="lot-text">获取游戏中...</span></a></li>
+                                    <li class="nav-li lot42" data-sort="4"><a id="hot_main-item-42" class="nav-btn cur-btn" data-argsid="42" title="新加坡28" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html?gameId=42&#39;)"><i></i><span class="lot-text">获取游戏中...</span></a></li>
+                                    <li class="nav-li lot52" data-sort="5"><a id="hot_main-item-52" class="nav-btn cur-btn" data-argsid="52" title="三分PK拾" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/npk10.html&#39;)"><i></i><span class="lot-text">获取游戏中...</span></a></li>
+                                    <li class="nav-li lot18" data-sort="6"><a id="hot_main-item-18" class="nav-btn cur-btn" data-argsid="18" title="香港⑥合彩" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;)"><i></i><span class="lot-text">获取游戏中...</span></a></li>
+                                </ul>
+                            </div>
+                            <div id="high_lottery" class="live-nav toggleMenu" style="top: 0px;">
+                                <div class="main-top"><i class="icon-attr-up"></i><a><i class="icon-time-icon"></i><span class="lot-text">高频彩</span></a></div>
+                                <ul class="gao-ul">
+                                    <li id="shishicai_ul">
+                                        <div id="shishicai_" class="nav-li lot7"><span class="icon-attr-down"></span><a class="nav-btn"><i></i><span class="lot-text">时时彩</span></a></div>
+                                        <ul id="shishicai_ul2" hidden="">
+                                           <!-- <li class="nav-li lot51" data-sort="1"><a id="main-item-51" class="nav-btn cur-btn" data-argsid="51" title="三分时时彩" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;)"><i></i><span class="lot-text">三分时时彩</span></a></li>
+                                            <li class="nav-li lot5" data-sort="2"><a id="main-item-5" class="nav-btn cur-btn" data-argsid="5" title="重庆时时彩" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;)"><i></i><span class="lot-text">重庆时时彩</span></a></li>
+                                            <li class="nav-li lot9" data-sort="3"><a id="main-item-9" class="nav-btn cur-btn" data-argsid="9" title="北京PK拾" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;)"><i></i><span class="lot-text">北京PK拾</span></a></li>
+                                            <li class="nav-li lot52" data-sort="5"><a id="main-item-52" class="nav-btn cur-btn" data-argsid="52" title="三分PK拾" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/npk10.html&#39;)"><i></i><span class="lot-text">三分PK拾</span></a></li>
+                                            <li class="nav-li lot3" data-sort="100"><a id="main-item-3" class="nav-btn cur-btn" data-argsid="3" title="上海时时乐" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameSsl/index.html&#39;)"><i></i><span class="lot-text">上海时时乐</span></a></li>
+                                            <li class="nav-li lot4" data-sort="100"><a id="main-item-4" class="nav-btn cur-btn" data-argsid="4" title="天津时时彩" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/tjssc.html&#39;)"><i></i><span class="lot-text">天津时时彩</span></a></li>
+                                            <li class="nav-li lot7" data-sort="100"><a id="main-item-7" class="nav-btn cur-btn" data-argsid="7" title="新疆时时彩" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/xjssc.html&#39;)"><i></i><span class="lot-text">新疆时时彩</span></a></li>-->
+                                        </ul>
+                                    </li>
+                                    <li id="kuaisan_ul">
+                                        <div id="kuaisan_" class="nav-li lot10"><span class="icon-attr-down"></span><a class="nav-btn"><i></i><span class="lot-text">PK拾</span></a></div>
+                                        <ul id="kuaisan_ul2" hidden="">
+                                           <!-- <li class="nav-li lot10" data-sort="100"><a id="main-item-10" class="nav-btn cur-btn" data-argsid="10" title="江苏快三" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/jsks.html&#39;)"><i></i><span class="lot-text">江苏快三</span></a></li>
+                                            <li class="nav-li lot17" data-sort="100"><a id="main-item-17" class="nav-btn cur-btn" data-argsid="17" title="广西快三" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/gxks.html&#39;)"><i></i><span class="lot-text">广西快三</span></a></li>
+                                            <li class="nav-li lot11" data-sort="100"><a id="main-item-11" class="nav-btn cur-btn" data-argsid="11" title="安徽快三" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/ahks.html&#39;)"><i></i><span class="lot-text">安徽快三</span></a></li>-->
+                                        </ul>
+                                    </li>
+                                    <li id="shiyixuanwu_ul">
+                                        <div id="shiyixuanwu_" class="nav-li lot12"><span class="icon-attr-down"></span><a class="nav-btn"><i></i><span class="lot-text">11选5</span></a></div>
+                                        <ul id="shiyixuanwu_ul2" hidden="">
+                                           <!-- <li class="nav-li lot12" data-sort="100"><a id="main-item-12" class="nav-btn cur-btn" data-argsid="12" title="山东11选5" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sd.html&#39;)"><i></i><span class="lot-text">山东11选5</span></a></li>
+                                            <li class="nav-li lot13" data-sort="100"><a id="main-item-13" class="nav-btn cur-btn" data-argsid="13" title="上海11选5" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sh.html&#39;)"><i></i><span class="lot-text">上海11选5</span></a></li>
+                                            <li class="nav-li lot14" data-sort="100"><a id="main-item-14" class="nav-btn cur-btn" data-argsid="14" title="江西11选5" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/jx.html&#39;)"><i></i><span class="lot-text">江西11选5</span></a></li>
+                                            <li class="nav-li lot15" data-sort="100"><a id="main-item-15" class="nav-btn cur-btn" data-argsid="15" title="广东11选5" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/gd.html&#39;)"><i></i><span class="lot-text">广东11选5</span></a></li>-->
+                                        </ul>
+                                    </li>
+                                   <!-- <li id="pcdd_ul">
+                                        <div id="pcdd_" class="nav-li lot41-1"><span class="icon-attr-down"></span><a class="nav-btn"><i></i><span class="lot-text">PC蛋蛋</span></a></div>
+                                        <ul hidden="">
+                                            <li class="nav-li lot42" data-sort="4"><a id="main-item-42" class="nav-btn cur-btn" data-argsid="42" title="新加坡28" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html?gameId=42&#39;)"><i></i><span class="lot-text">新加坡28</span></a></li>
+                                            <li class="nav-li lot41" data-sort="100"><a id="main-item-41" class="nav-btn cur-btn" data-argsid="41" title="北京28" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html&#39;)"><i></i><span class="lot-text">北京28</span></a></li>
+                                        </ul>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div id="low_lottery" class="live-nav toggleMenu" style="top: 0px;">
+                                <div class="main-top"><i class="icon-attr-up"></i><a><i class="icon-down-icon"></i><span class="lot-text">低频彩</span></a></div>
+                                <ul class="gao-ul">
+                                    <li class="nav-li lot18" data-sort="6"><a id="main-item-18" class="nav-btn cur-btn" data-argsid="18" title="香港⑥合彩" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;)"><i></i><span class="lot-text">获取游戏中...</span></a></li>
+                                    <li class="nav-li lot1" data-sort="100"><a id="main-item-1" class="nav-btn cur-btn" data-argsid="1" title="福彩3D" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/fcsd.html&#39;)"><i></i><span class="lot-text">获取游戏中...</span></a></li>
+                                    <li class="nav-li lot2" data-sort="100"><a id="main-item-2" class="nav-btn cur-btn" data-argsid="2" title="排列三" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/tcps.html&#39;)"><i></i><span class="lot-text">获取游戏中...</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal mCSB_scrollTools_vertical" style="display: none;">
+                        <div class="mCSB_draggerContainer">
+                            <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; display: block; height: 0px; max-height: 531px; top: 0px;" oncontextmenu="return false;">
+                                <div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
+                            </div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-control" class="menu-control go-bottom"></div>
+            </div>
+        </div>
+        <!-- 以下LAYOUT -->
+        <div id="live-main-wrap" class="live-main-wrap" style="width: 88%; min-height: 820px;">
+            <!-- 购彩大厅 -->
+            <div id="showhide-wrap" style="display: block;">
+                <!-- 网页正文的头部 -->
+                <div id="_lottery_menu_head" class="new-header">
+                    <div name="hide">
+                        <div class="bull" id="sys_tip_outer">
+                            <span class="icon-acc"></span>
+                            <!-- 这里是跑马灯<marquee>标签，由js加入dom  -->
+                            <marquee id="systemAnnouncementList" behavior="scroll"></marquee>
+                        </div>
+                        <div id="header_user" class="header-user">
+                            <div class="user-name">账号：<span id="user_name" name="user_name">und3ad</span></div>
+                            <div class="user-money">余额：<span id="balance">￥0.000</span>
+                                <div class="money-btn">
+                                    <button class="recharge" data-modal="deposit" onclick="">充值</button>
+                                    <button class="withdraw" data-modal="withdrawal" onclick="">提现</button>
+                                    <button class="withdraw" onclick="__openWin(&#39;lgOut&#39;,_static_const.Signout_url)" style="display:none;">退出</button>
+                                </div>
+                            </div>
+                            <div class="user-center">
+                                <ul>
+                                    <li onclick="" data-modal='personal'><a><i class="icon-7"></i>会员中心</a></li>
+                                    <li onclick="" data-modal='personal/gameHistory'><a><i class="icon-3"></i>下注记录</a></li>
+                                    <li id="customerService" onclick="" data-modal=''><a><i class="icon-4"></i>在线客服</a></li>
+                                    <li onclick="" data-modal='message/inbox'><a><i class="icon-Shape-47"></i>消息中心</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="header_user_login">
+
+                            <form id="loginForm" autocomplete="off">
+                                <div class="lottery_login">
+                                    <div class="top-login-bg"><i class="icon-6"></i>
+                                        <input class="top_loginip form-control" name="username" type="text" placeholder="请输入用户名">
+                                    </div>
+                                    <div class="top-login-bg"><i class="icon-lock-icon"></i>
+                                        <input class="top_loginip form-control" name="password" type="password" placeholder="请输入密码">
+                                    </div>
+                                    <div class="need_captcha">
+                                        <div class="top_click" name="div_top_click">请输入验证码</div>
+                                        <div class="yanzhengma">
+                                            <div class="top-login-bg2">
+                                                <input class="top_loginmm" id="authnum" name="authnum" maxlength="4" type="text" placeholder="验证码">
+                                                <span class="register_captcha_span">
+                                                <img name="login_img" class="login_img">
+                                                <!--<img name="login_img" class="login_img" src="/seccode/makecode.html?nchash=&amp;t=0.03188619167448414">-->
+                                            </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <input class="lottery_anniu form-submit" type="button" name="login" value="登录">
+                                    <input class="lottery_anniu" type="button" onclick="opRegDIV()" value="注册">
+                                    <input class="lottery_anniu" type="button" onclick="opFreePalyDIV()" value="免费试玩">
+
+                                </div>
+
+                            </form>
+                            <div class="download">
+                                <a class="icon-appleinc" onclick="__openWin(&#39;home_phone&#39;,_static_const.download_Iphone)"></a>
+                                <a class="icon-android" onclick="__openWin(&#39;home_phone&#39;,_static_const.download_Android)"></a>
+                                <span class="down-text" onclick="__openWin(&#39;home_phone&#39;,_static_const.download_Iphone)">手机APP下载</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="_close"></button>
+                </div>
+                <!-- 正文开始 -->
+                <div id="iframeDivList" class="iframeDivList" style="height: ;">
+                    <!-- iframe  name 禁止相同,该页面的id不可重新定义，不可在其他页面出现 -->
+                    <div id="__iframe_list_" style="display:block;">
+                        <div id="i_list_1" class="div_iframe" name="iframe" style="display: block;">
+                            <iframe id="wl_lott" name="iframe1" scrolling="yes" marginwidth="0px" frameborder="0" samless="" src="" style="overflow-x: hidden;"></iframe>
+                        </div>
+                        <div id="i_list_2" class="div_iframe" style="display: none;">
+                            <!-- 够彩大厅-其他页面（投注页面） -->
+                        </div>
+                    </div>
+                    <!-- end:  '#__iframe_list_'  -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/rollups/tripledes.js"></script>
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/components/mode-ecb-min.js"></script>
+    <script type="text/javascript" src="common/v.1.0.0/tcg-lib.js"></script>
+    <script type="text/javascript" src="common/v.1.0.0/rsa-lib.js"></script>
+
+
+    <script type="text/javascript" src="mc/v.1.0.0/mc-control.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-ui.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-wps.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-properties.js"></script>
+
+    <script type="text/javascript" src="ac/v.1.0.0/ac-control.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-ui.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-wps.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-properties.js"></script>
+
+    <script type="text/javascript" src="./js/WPS-api.js"></script>
+    <script type="text/javascript" src="./js/500vip-subcommon.js"></script>
+    <script type="text/javascript" src="./js/500vip-prop.js"></script>
+    <script type="text/javascript" src="./js/500vip-control.js"></script>
+    <script type="text/javascript" src="./js/500vip-ui.js"></script>
+    <script type="text/javascript" src="./js/betting-control.js"></script>
+    <script type="text/javascript" src="./js/betting.js"></script>
+</body>
+
+</html>

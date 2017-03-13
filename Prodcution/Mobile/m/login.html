@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>500vip彩票</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,shrink-to-fit=no, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+
+    <link rel="stylesheet" href="css/lobby.css">
+    <link rel="stylesheet" href="css/Font.css">
+    <link rel="icon" sizes="196x196" href="images/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="196x196" href="images/favicon.png">
+    <link rel="shortcut icon" sizes="196x196" href="images/favicon.png">
+
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="login-back">
+<header class="header login">
+    <nav class="nav">
+        <a href="./lobby.html" class="left bet-left-back icon-arrow-left"></a>
+        <div>登录</div>
+    </nav>
+</header>
+<section class="central login-reg">
+    <div class="central_body" id="loginForm">
+        <div class="login-div">
+            <div class="loginuser">
+                <span class="left icon-user"></span>
+                <input placeholder="请输入您的帐号" name="username" maxlength="16" class="loginInput" id="username">
+                <span class="right icon-arrow-down"></span>
+            </div>
+            <div class="loginpassword">
+                <span class="left icon-unlock"></span>
+                <input placeholder="请输入密码" name="loginpass" class="loginInput" id="loginpass" type="password">
+                <span class="right"></span>
+            </div>
+        </div>
+        <div class="actions">
+            <a target="_new"
+               href="http://kf1.learnsaas.com/chat/chatClient/chatbox.jsp?companyID=688455&configID=57905&jid=9040258761"><span>在线客服</span></a>
+            <span id="forgot_password">忘记密码</span>
+        </div>
+        <button class="login-btn">登录</button>
+        <button class="reg-btn" id="show_register_page">立即注册</button>
+        <button class="reg-btn" id="register_demo">免费试玩</button>
+    </div>
+
+    <div class="central_body hide" id="forgotPasswordForm">
+        <div class="login-div">
+            <div class="loginuser forgot-password-form">
+                <span class="left icon-user"></span>
+                <input placeholder="请输入您的帐号" name="retrieveUsername"  data-validation="username" data-null_error="registerForm_username_required" maxlength="16" class="loginInput">
+                <span class="right icon-arrow-down"></span>
+            </div>
+            <div class="loginuser forgot-password-form">
+                <span class="left icon-e-mail"></span>
+                <input placeholder="输入常用邮箱" name="retrieveEmail"  data-validation="email" data-null_error="registerForm_email_required" value="" class="loginInput">
+                <span class="right"></span>
+            </div>
+        </div>
+
+        <button class="login-btn" id="retrieve_password">提交</button>
+    </div>
+</section>
+</body>
+<script type="text/javascript" src="js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="js/lib/tripledes.js"></script>
+<script type="text/javascript" src="js/lib/RSA-lib.js"></script>
+<script type="text/javascript" src="js/lib/wps-lib.js"></script>
+<script type="text/javascript" src="js/lib/jquery.i18n.properties-1.0.9.js"></script>
+<script type="text/javascript" src="js/lib/tcg-lib.js"></script>
+<script type="text/javascript" src="js/library.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+<script type="text/javascript">
+    controller.login();
+</script>
+</html>

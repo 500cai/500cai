@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=Edge">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www500vip.com/500vip/statics/images/favicon.ico" media="screen">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=yes">
+
+    <meta name="format-detection" content="telephone=no">
+    <title>开奖公告</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/dialog_box.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="./js/lib/jquery.timepicker/jquery-ui-timepicker.css" />
+    <link rel="stylesheet" type="text/css" href="./css/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/popups_model.css" />
+    <link rel="stylesheet" type="text/css" href="./skin/css/skin.css" />
+    <link media="all" href="css/500vip-icomoon.css" type="text/css" rel="stylesheet" />
+    <!--[if lte IE 8]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 7]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 6]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <link rel="stylesheet" href="mc/v.1.0.0/mc_lotto.css"/>
+    <link rel="stylesheet" href="mc/v.1.0.0/mc_icon.css"/>
+    <link rel="stylesheet" href="ac/v.1.0.0/ac_lotto.css"/>
+	
+	<script type="text/javascript" src="./js/lib/jquery-1.11.1.min.js"></script> 
+</head>
+
+<body style="">
+    <div class="header-plus" id="header_plus">
+        <div class="header-toptray-plus" style="">
+            <div class="quick-tpis" id="sys_tip_outer">
+                <i class="icon-acc"></i>
+                <!-- 这里是跑马灯<marquee>标签，由js加入dom  -->
+                <marquee id="sys_tip" behavior="scroll"></marquee>
+            </div>
+        </div>
+        <div class="liansai-wrap" id="liansai-wrap">
+            <!-- 头部 -->
+            <div class="liansai" id="head_top">
+                <div class="wrapper clearfix relative">
+                    <div>
+                        <h1 class="sprite sprite-logo"></h1>
+                    </div>
+                    <div id="header_user_login" class="wrap-login" hidden="">
+                        <div class="logxinxi" id="logxinxi">
+                        <form id="loginForm">
+                            <div class="top_login">
+                                <div style="float:right;">
+                                    <div class="top-login-bg">
+                                        <input class="top_loginip" name="username" type="text" placeholder="用户名：">
+                                    </div>
+                                    <div class="top-login-bg">
+                                        <input class="top_loginip" name="password" type="password" placeholder="密码：">
+                                    </div>
+                                    <div id="need_captcha" class="need_captcha">
+                                        <div class="top_click" name="div_top_click">
+                                            <!-- no delete -->
+                                        </div>
+                                        <div class="yanzhengma">
+                                            <div class="top-login-bg2">
+                                                <label>验证码：</label>
+                                                <input class="top_loginmm" name="authnum" maxlength="4" type="text">
+                                                <span class="register_captcha_span" style="margin:0; position: relative;">
+                                                    <img name="login_img" class="login_img">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input class="dr_anniu form-submit" type="button" name="login" value="登录">
+                                    <input class="dr_anniu reg_anniu" type="button" onclick="" value="注册">
+                                </div>
+                                <input type="hidden" name="ref_url" value="">
+                                <input type="hidden" name="form_submit" value="ok">
+                                <input type="hidden" name="formhash" value="">
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                    <div id="header_user" class="logxinxi" hidden="">
+                        <div class="top_login">
+                            <span>您好，<a onclick="" rel="nofollow" class="play-jl" target="_blank" name="user_name"></a></span>
+                            <span>可用余额：</span>
+                            <span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span><span id="header_money_refresh"><i class="icon-refresh-icon"></i></span></a>
+                            </span>
+                            <span></span>
+                            <span>
+                                    &nbsp;|&nbsp;
+                                    <a onclick="">用户中心</a>&nbsp;|&nbsp;
+                                    <a onclick="">充值</a>&nbsp;|&nbsp;
+                                    <a onclick="">提现</a>&nbsp;|&nbsp;
+                                    <a onclick="">交易记录</a>&nbsp;|&nbsp;
+                                    <a onclick="">个人消息</a>&nbsp;|&nbsp;
+                                <a onclick="">退出</a>&nbsp;
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-navbar-plus">
+                <div class="wrapper clearfix" id="header_box">
+                    <div class="lottery-plus" id="lotterys">
+                        <h2>选择彩种 <a class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+                        <div class="lotterys-list-hd" id="lotterysList" style="display: none;">
+                            <ul class="lottery-list-box" id="lottery-list-box">
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/5.png"></i><span class="color333">重庆时时彩</span></a><a onclick="" target="_blank" class="status-desc">最火爆的快彩</a></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/9.png"></i><span class="color333">北京PK拾</span></a><span class="normal-desc">彩友中200注</span></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/18.png"></i><span class="color333">香港⑥合彩</span></a><span class="normal-desc">每周开奖三期</span></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/11.png"></i><span class="color333">安徽快三</span></a><span class="normal-desc">全天80期快乐猜大小</span></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/3.png"></i><span class="color333">上海时时乐</span></a><span class="normal-desc"></span></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/4.png"></i><span class="color333">天津时时彩</span></a>
+                                    <a onclick="" target="_blank" class="status-desc"></a>
+                                </li>
+                                <li class="allGames clearfix" data-type="1">
+                                    <h3><span>高频彩</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="">三分时时彩</a></li>
+                                        <li><a onclick="">重庆时时彩</a></li>
+                                        <li><a onclick="">北京PK拾</a></li>
+                                        <li><a onclick="">新加坡28</a></li>
+                                        <li><a onclick="">三分PK拾</a></li>
+                                        <li><a onclick="">上海时时乐</a></li>
+                                    </ul><i class="icon" id="open-btn-1" style="display: block;"></i>
+                                    <div class="line-fff" style="display: none;"></div>
+                                    <div class="moreGames clearfix" style="display: none;" id="moreGames_1">
+                                        <div class="moreGames-box fl">
+                                            <div class="otherGames num-games">
+                                                <h3>高频彩</h3>
+                                                <ol>
+                                                    <li><a onclick="">三分时时彩</a></li>
+                                                    <li><a onclick="">重庆时时彩</a></li>
+                                                    <li><a onclick="">北京PK拾</a></li>
+                                                    <li><a onclick="">新加坡28</a></li>
+                                                    <li><a onclick="">三分PK拾</a></li>
+                                                    <li><a onclick="">上海时时乐</a></li>
+                                                    <li><a onclick="">天津时时彩</a></li>
+                                                    <li><a onclick="">新疆时时彩</a></li>
+                                                    <li><a onclick="">江苏快三</a></li>
+                                                    <li><a onclick="">山东11选5</a></li>
+                                                    <li><a onclick="">上海11选5</a></li>
+                                                    <li><a onclick="">江西11选5</a></li>
+                                                    <li><a onclick="">广东11选5</a></li>
+                                                    <li><a onclick="">广西快三</a></li>
+                                                    <li><a onclick="">北京28</a></li>
+                                                    <li><a onclick="">安徽快三</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="allGames" data-type="2">
+                                    <h3><span>低频彩</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="">香港⑥合彩</a></li>
+                                        <li><a onclick="">福彩3D</a></li>
+                                        <li><a onclick="">排列三</a></li>
+                                    </ul>
+                                </li>
+                                <li class="allGames clearfix" data-type="3">
+                                    <h3><span>全部</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="">三分时时彩</a></li>
+                                        <li><a onclick="">重庆时时彩</a></li>
+                                        <li><a onclick="">北京PK拾</a></li>
+                                        <li><a onclick="">新加坡28</a></li>
+                                        <li><a onclick="">三分PK拾</a></li>
+                                        <li><a onclick="">香港⑥合彩</a></li>
+                                    </ul><i class="icon" id="open-btn-1" style="display: block;"></i>
+                                    <div class="line-fff"></div>
+                                    <div class="moreGames clearfix" style="display: none;" id="moreGames_3">
+                                        <div class="moreGames-box fl">
+                                            <div class="otherGames num-games">
+                                                <h3>全部</h3>
+                                                <ol>
+                                                    <li><a onclick="">三分时时彩</a></li>
+                                                    <li><a onclick="">重庆时时彩</a></li>
+                                                    <li><a onclick="">北京PK拾</a></li>
+                                                    <li><a onclick="">新加坡28</a></li>
+                                                    <li><a onclick="">三分PK拾</a></li>
+                                                    <li><a onclick="">香港⑥合彩</a></li>
+                                                    <li><a onclick="">上海时时乐</a></li>
+                                                    <li><a onclick="">天津时时彩</a></li>
+                                                    <li><a onclick="">新疆时时彩</a></li>
+                                                    <li><a onclick="">江苏快三</a></li>
+                                                    <li><a onclick="">山东11选5</a></li>
+                                                    <li><a onclick="">上海11选5</a></li>
+                                                    <li><a onclick="">江西11选5</a></li>
+                                                    <li><a onclick="">广东11选5</a></li>
+                                                    <li><a onclick="">广西快三</a></li>
+                                                    <li><a onclick="">北京28</a></li>
+                                                    <li><a onclick="">安徽快三</a></li>
+                                                    <li><a onclick="">福彩3D</a></li>
+                                                    <li><a onclick="">排列三</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul id="head_menu" class="nav-plus clearfix">
+                        <li><a data-url="/" onclick="">首页</a></li>
+                        <li><a data-url="/index/lobby.html" onclick="">购彩大厅</a></li>
+                        <li><a data-url="/index/mobile.html" onclick="">手机购彩</a><em class="hot-icon"></em></li>
+                        <li><a data-url="/promotion/index.html" onclick="">优惠活动</a><em class="hot-icon"></em></li>
+                        <li><a data-url="/draw/index.html" onclick="">开奖公告</a> </li>
+                        <li class="on"><a data-url="/trend/trendList.html" onclick="">走势图表</a></li>
+                        <li><a data-url="/news/index.html" onclick="">资讯</a></li>
+                    </ul>
+                    <div class="quick-list">
+                        <a onclick="">客服</a>
+                        <a onclick="">帮助</a>
+                        <a onclick="">玩法</a>
+                        <a id="agent_reg_url" onclick="">代理</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap-bg" style="min-height: 880px;">
+        <div class="main">
+
+            <div id="_top_menu_div">
+                <div class="tab_menu">
+                    <div data-type="all" class="current">全部彩种</div>
+                    <div data-type="1">时时彩</div>
+                    <div data-type="2">快三</div>
+                    <div data-type="3">十一选5</div>
+                    <div data-type="5">低频彩</div>
+                    <div data-type="6">PC蛋蛋</div>
+                </div>
+                <div class="game_btn"><span id="_m_t_51" onclick="goIframe(&#39;/trend/index.html?gameId=51&amp;out=yes&#39;)" name="type_1">三分时时彩</span><span id="_m_t_5" name="type_1" onclick="goIframe(&#39;/trend/index.html?gameId=5&amp;out=yes&#39;)">重庆时时彩</span><span id="_m_t_9" name="type_1" onclick="goIframe(&#39;/trend/index.html?gameId=9&amp;out=yes&#39;)">北京PK拾</span><span id="_m_t_52" name="type_1" onclick="goIframe(&#39;/trend/index.html?gameId=52&amp;out=yes&#39;)">三分PK拾</span><span id="_m_t_3" name="type_1" onclick="goIframe(&#39;/trend/index.html?gameId=3&amp;out=yes&#39;)">上海时时乐</span><span id="_m_t_4" name="type_1" onclick="goIframe(&#39;/trend/index.html?gameId=4&amp;out=yes&#39;)">天津时时彩</span><span id="_m_t_7" name="type_1" onclick="goIframe(&#39;/trend/index.html?gameId=7&amp;out=yes&#39;)">新疆时时彩</span><span id="_m_t_10" onclick="goIframe(&#39;/trend/index.html?gameId=10&amp;out=yes&#39;)" name="type_2">江苏快三</span><span id="_m_t_17" name="type_2" onclick="goIframe(&#39;/trend/index.html?gameId=17&amp;out=yes&#39;)">广西快三</span><span id="_m_t_11" name="type_2" onclick="goIframe(&#39;/trend/index.html?gameId=11&amp;out=yes&#39;)">安徽快三</span><span id="_m_t_12" onclick="goIframe(&#39;/trend/index.html?gameId=12&amp;out=yes&#39;)" name="type_3">山东11选5</span><span id="_m_t_13" name="type_3" onclick="goIframe(&#39;/trend/index.html?gameId=13&amp;out=yes&#39;)">上海11选5</span><span id="_m_t_14" name="type_3" onclick="goIframe(&#39;/trend/index.html?gameId=14&amp;out=yes&#39;)">江西11选5</span><span id="_m_t_15" name="type_3" onclick="goIframe(&#39;/trend/index.html?gameId=15&amp;out=yes&#39;)">广东11选5</span><span id="_m_t_18" onclick="goIframe(&#39;/trend/index.html?gameId=18&amp;out=yes&#39;)" name="type_5">香港⑥合彩</span><span id="_m_t_1" name="type_5" onclick="goIframe(&#39;/trend/index.html?gameId=1&amp;out=yes&#39;)">福彩3D</span><span id="_m_t_2" name="type_5" onclick="goIframe(&#39;/trend/index.html?gameId=2&amp;out=yes&#39;)">排列三</span><span id="_m_t_42" onclick="goIframe(&#39;/trend/index.html?gameId=42&amp;out=yes&#39;)" name="type_6">新加坡28</span><span id="_m_t_41" name="type_6" onclick="goIframe(&#39;/trend/index.html?gameId=41&amp;out=yes&#39;)">北京28</span><i></i></div>
+            </div>
+        </div>
+        <div id="_iframe_divs" class="_iframe_divs_">
+            <div id="_games_2">
+                <div class="trend-box">
+                    <div class="trend-title">
+                        <h2>时时彩</h2>
+                    </div>
+                    <div class="trend-main">
+                        <ul class="trend-lot-ul clearfix">
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=51&amp;out=yes&#39;)">
+                                        <img src="./images/51.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        三分时时彩                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=51&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=5&amp;out=yes&#39;)">
+                                        <img src="./images/5.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        重庆时时彩                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=5&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=9&amp;out=yes&#39;)">
+                                        <img src="./images/9.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        北京PK拾                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=9&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=52&amp;out=yes&#39;)">
+                                        <img src="./images/52.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        三分PK拾                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=52&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=3&amp;out=yes&#39;)">
+                                        <img src="./images/3.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        上海时时乐                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=3&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=4&amp;out=yes&#39;)">
+                                        <img src="./images/4.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        天津时时彩                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=4&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=7&amp;out=yes&#39;)">
+                                        <img src="./images/7.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        新疆时时彩                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=7&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="trend-box">
+                    <div class="trend-title">
+                        <h2>快三</h2>
+                    </div>
+                    <div class="trend-main">
+                        <ul class="trend-lot-ul">
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=10&amp;out=yes&#39;)">
+                                        <img src="./images/10.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        江苏快三                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=10&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=17&amp;out=yes&#39;)">
+                                        <img src="./images/17.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        广西快三                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=17&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=11&amp;out=yes&#39;)">
+                                        <img src="./images/11.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        安徽快三                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=11&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="trend-box">
+                    <div class="trend-title">
+                        <h2>十一选5</h2>
+                    </div>
+                    <div class="trend-main">
+                        <ul class="trend-lot-ul">
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=12&amp;out=yes&#39;)">
+                                        <img src="./images/12.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        山东11选5                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=12&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=13&amp;out=yes&#39;)">
+                                        <img src="./images/13.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        上海11选5                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=13&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=14&amp;out=yes&#39;)">
+                                        <img src="./images/14.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        江西11选5                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=14&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=15&amp;out=yes&#39;)">
+                                        <img src="./images/15.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        广东11选5                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=15&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="trend-box">
+                    <div class="trend-title">
+                        <h2>低频彩</h2>
+                    </div>
+                    <div class="trend-main">
+                        <ul class="trend-lot-ul">
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=18&amp;out=yes&#39;)">
+                                        <img src="./images/18.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        香港⑥合彩                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=18&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=1&amp;out=yes&#39;)">
+                                        <img src="./images/1.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        福彩3D                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=1&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=2&amp;out=yes&#39;)">
+                                        <img src="./images/2.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        排列三                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=2&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="trend-box">
+                    <div class="trend-title">
+                        <h2>PC蛋蛋</h2>
+                    </div>
+                    <div class="trend-main">
+                        <ul class="trend-lot-ul">
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=42&amp;out=yes&#39;)">
+                                        <img src="./images/42.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        新加坡28                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=42&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                            <li>
+                                <div class="lottery-logo lottery-logo-big">
+                                    <a onclick="goIframe(&#39;/trend/index.html?gameId=41&amp;out=yes&#39;)">
+                                        <img src="./images/41.png" alt="">
+                                    </a>
+
+                                    <div class="lottery-title">
+                                        <h3>
+                                        北京28                                    </h3>
+                                    </div>
+                                </div>
+                                <div class="right-content right-content-big">
+                                    <div class="row-content">
+                                        <div class="trend-content">
+                                            <span class="trend-btn"><a onclick="goIframe(&#39;/trend/index.html?gameId=41&amp;out=yes&#39;)">基本走势</a></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div>
+                                        <a name="dltAnchor"> </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="div_iframe" name="iframe_div"></div>
+        </div>
+    </div>
+
+    <div id="_foot_home">
+        <div class="foot_box">
+            <div class="about_box">
+                <ul class="foot_info">
+                    <li class="foot_wljc"></li>
+                    <li class="foot_wangan"></li>
+                    <li class="foot_wsjy"></li>
+                    <li class="foot_xylh"></li>
+                    <li class="foot_kxwz"></li>
+                </ul>
+                <p>2009-2017©<a>500vip彩票</a> | 客服邮箱：<a href="mailto:500vipkf@gmail.com"><span class="eng">500vipkf@gmail.com </span></a> | 客服QQ：
+                    <a href="tencent://message/?uin=917500500&amp;Site=500vip%E5%BD%A9%E7%A5%A8&amp;Menu=yes"><span class="eng">917500500</span></a> |
+                    <br><span class="">500vip彩票郑重提示：彩票有风险，投注需谨慎！</span> 不向未满18周岁的青少年出售彩票</p>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 更新浏览器 -->
+    <div class="ie-alert-wrap" style="display: none;">
+        <h1>是时候升级你的浏览器了</h1>
+        <p>你正在使用 Internet Explorer 的早期版本（IE9以下版本 或使用该内核的浏览器）。这意味着在升级浏览器前，你将无法访问此网站。</p>
+        <hr>
+        <h2>请注意：Windows XP 及 Internet Explorer 早期版本的支持已经结束</h2>
+        <p>自 2016 年 1 月 12 日起，Microsoft 不再为 IE 11 以下版本提供相应支持和更新。没有关键的浏览器安全更新，您的 PC 可能易受有害病毒、间谍软件和其他恶意软件的攻击，它们可以窃取或损害您的业务数据和信息。请参阅 <a href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support">微软对 Internet Explorer 早期版本的支持将于 2016 年 1 月 12 日结束的说明</a> 。</p>
+        <hr>
+        <h2>更先进的浏览器</h2>
+        <p>推荐使用以下浏览器的最新版本。如果你的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<b id="referrer"></b>即可。</p>
+        <ul class="browser">
+            <li class="browser-chrome"><a href="http://www.google.cn/chrome/browser/index.html?hl=zh-CN&amp;standalone=1" target="_blank"> 谷歌浏览器<span>Google Chrome</span></a></li>
+            <li class="browser-360"><a href="http://se.360.cn/" target="_blank"> 360安全浏览器 <span>360用户推荐</span></a></li>
+            <!-- 2016-08-06 -->
+            <li class="browser-firefox"><a href="http://www.firefox.com.cn/" target="_blank"> 火狐浏览器<span>Mozilla Firefox</span></a></li>
+            <li class="browser-ie"><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank"> IE浏览器<span>Internet Explorer</span></a></li>
+            <li class="browser-qq"><a href="http://browser.qq.com/" target="_blank"> QQ浏览器9 <span>全新升级版本</span></a></li>
+            <!-- 9.4.8187.400 -->
+
+            <div class="clean"></div>
+        </ul>
+        <hr>
+        <h2>为什么会出现这个页面？</h2>
+        <p>如果你不知道升级浏览器是什么意思，请请教一些熟练电脑操作的朋友。如果你使用的不是IE6/7/8/9/10，而是360浏览器、QQ浏览器、搜狗浏览器等，出现这个页面是因为你使用的不是该浏览器的最新版本，升级至最新即可。</p>
+        <hr>
+    </div>
+    <div class="ie-alert-bg" style="display: none;"></div>
+    <!-- start :  浮动图标  -->
+    <div id="_leftAD" class="_float_AD l_AD">
+        <img src="./images/float_left.png">
+        <div name="close_btn"></div>
+        <a class="top1_btn" href="tencent://message/?uin=917500500&amp;Site=500vip%E5%BD%A9%E7%A5%A8&amp;Menu=yes"></a>
+        <div class="top2_btn" onclick=""></div>
+        <div class="two_img"><img src="./images/getAndroidPng.html"></div>
+    </div>
+    <div id="_rightAD" class="_float_AD r_AD">
+        <img src="./images/float_right.png">
+        <div name="close_btn"></div>
+        <div class="top1_btn" onclick=""></div>
+        <div class="top2_btn" onclick=""></div>
+        <div class="two_img"><img src="./images/getIosPng.html"></div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $("#_leftAD [name=close_btn],#_rightAD [name=close_btn]").click(function() {
+                $(this).parent().hide();
+            });
+        });
+    </script>
+    <!-- end :  浮动图标  -->
+
+    <!-- 倒计时维护 -->
+    <div class="maintain-countdown" style="display: none;">
+        <div class="maintain-time" id="main_count_down">
+            维护倒计时
+            <br>
+            <div id="mian_time"></div>
+        </div>
+    </div>
+
+    <div id="window-resizer-tooltip" style="display: none;">
+        <a href="http://www500vip.com/trend/trendList.html#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1857</span> x <span class="tooltipHeight" id="winHeight">1080</span>
+        <br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1857</span> x <span class="tooltipHeight" id="vpHeight">965</span></div>
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/rollups/tripledes.js"></script>
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/components/mode-ecb-min.js"></script>
+    <script type="text/javascript" src="common/v.1.0.0/tcg-lib.js"></script>
+    <script type="text/javascript" src="common/v.1.0.0/rsa-lib.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-control.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-ui.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-wps.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-properties.js"></script>
+
+    <script type="text/javascript" src="ac/v.1.0.0/ac-control.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-ui.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-wps.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-properties.js"></script>
+    <script type="text/javascript" src="./js/WPS-api.js"></script>
+    <script type="text/javascript" src="./js/500vip-subcommon.js"></script>
+    <script type="text/javascript" src="./js/500vip-control.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/500vip-ui.js"></script>
+    <script type="text/javascript" src="./js/500vip-prop.js"></script>
+</body>
+
+</html>

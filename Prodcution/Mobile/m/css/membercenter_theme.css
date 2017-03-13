@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+header.header {background: #ec2829;}
+.transfer_info.bet-o-down:before {background-color: #ec2829;}
+.register_submit button {background-color: #ec2829;}
+.transfer_refresh {color: #ec2829;}
+.transhipment .circle {background-color: #ec2829;}
+.transhipment img {box-shadow: 0px 9px 25px 0px #ec2829;}
+.button_submit {background-color: #ec2829;}
+.register_people > span.active, .game_small_nav > span.active {color: #ec2829;border-bottom: 2px solid #ec2829;}
+.tabitem.active{color: #ec2829; border-bottom: 2px solid #ec2829;}
+.dp-calendar .header{background-image: -webkit-linear-gradient( 2deg, rgb(42, 11, 11) 0%, rgb(161, 2, 2) 32%, rgb(180, 5, 5) 49%, rgb(119, 17, 17) 66%, rgb(43, 12, 12) 100%);}
+.calweek-con > div {
+	background-image: -moz-linear-gradient( -49deg, rgb(117,56,209) 0%, rgb(157,112,225) 100%);
+	background-image: -webkit-linear-gradient( -49deg, rgb(209, 56, 56) 0%, rgb(225, 112, 112) 100%);
+	background-image: -ms-linear-gradient( -49deg, rgb(117,56,209) 0%, rgb(157,112,225) 100%);
+}
+.dp-calendar > .main, .dp-calendar > .inst {box-shadow: 0px 5px 16px 0px rgba(75, 0, 0, 0.3);}
+.dialog_main {background-color: rgba(0, 0, 0, .85);}
+.dialog_main .actions span.determine {background-color: #ec2829;}
+.dialog_main .actions span.cancel {background-color: #363636;}
+.loading .loader {color: #ec2829;} .loading {background-color: rgba(255,255,255,.52);}
+.is-today > .pika-button.pika-day {border: 1px solid #ec2829;}
+.modal_login div.input span.right.bet-eye.active, .register_info span.right.right.bet-eye.active {color: #ec2829;}
+.register_submit button,.revoke_button button{
+    background-color: #ec2829;
+ 	border:none;
+	line-height: 1rem;
+}
+.button{
+    border: none 0;
+    padding: .45rem .8rem;
+    text-align: center;
+    border-radius: .2rem;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.23);
+}
+.mchase-cbgcolor > p.active{background-color: #ec2829;}
+.mchase-mbg{background-color: rgba(0, 0, 0, .85);}
+.mchase-tcolor{color: #fff;}
+.BJPK10{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/BJPK10.png') !important;}
+.BJSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/BJSSC.png') !important;}
+.CQSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/CQSSC.png') !important;}
+.FC3D{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/FC3D.png') !important;}
+.GD11X5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/GD11X5.png') !important;}
+.HLJSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/HLJSSC.png') !important;}
+.JX11X5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/JX11X5.png') !important;}
+.KRSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/KRSSC.png') !important;}
+.SD11X5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/SD11X5.png') !important;}
+.TCP3P5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/TCP3P5.png') !important;}
+.TJSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/TJSSC.png') !important;}
+.TWSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/TWSSC.png') !important;}
+.XJSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/XJSSC.png') !important;}
+.XYPK10{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/XYPK10.png') !important;}
+.CASSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/CASSC.png') !important;}
+.T2KSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WCSSC.png') !important;}
+.T2KFFC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WCFFC.png') !important;}
+.T2KWFC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WCWFC.png') !important;}
+.T2K11X5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WC11X5.png') !important;}
+.T2KPK10{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WCPK10.png') !important;}

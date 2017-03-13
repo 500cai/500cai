@@ -1,0 +1,253 @@
+.model_child_menus{
+    height: 600px;
+    width: 167px;
+    margin:0px 0px;
+    float: left;
+    background-color:#eaeaea !important;
+    color: #FFFFFF;
+}
+
+.model_child_menus ul li:hover,
+.sub-act
+{
+    background: url("/skin/images/icons.png") no-repeat -130px -426px !important;
+
+}
+
+
+.model_child_menus a:hover
+{
+  color: #ffffff !important;
+}
+
+
+.model_main_menus *,
+.model_child_menus *
+{
+  color: #555 !important;
+}
+
+.model_main_menus {
+  background-color: #d8d8d8 !important;
+  border-bottom-left-radius: 10px;
+  border-left: 2px solid #d8d8d8 !important;
+  border-top-left-radius: 10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  float: left;
+  height: 600px;
+  margin: 0;
+  padding: 31px 0 0;
+  position: relative;
+  top: 3px;
+  width: 71px;
+}
+
+
+/*------------------------------member center icon----------------------*/
+.deposit_icon,.withdraw_icon,.member_icon{
+    background-image: url("/skin/images/icons.png") !important;
+    width:46px;
+    height:46px;
+}
+
+.deposit_icon{
+    background-position: -7px -356px;
+}
+.withdraw_icon{
+    background-position: -7px -407px;
+}
+.member_icon{
+    background-position: -7px -460px;
+}
+.agent_icon{
+    background: url("/skin/images/icons.png") no-repeat -7px -511px;
+    width:46px;
+    height:46px;
+}
+.email_icon{
+    background: url("/skin/images/icons.png") no-repeat -7px -562px;
+    width:46px;
+    height:46px;
+}
+.service_icon{
+    background: url("/skin/images/icons.png") no-repeat -7px -613px;
+    width:46px;
+    height:46px;
+}
+.help_icon{
+    background: url("/skin/images/icons.png") no-repeat -7px -664px;
+    width:46px;
+    height:46px;
+}
+
+
+/**********
+  LEFT MENU MESSAGES
+**********/
+dd.sb-message,
+dt.skin_email_icon
+{
+  position: relative;
+}
+
+dd.sb-message span,
+dt.skin_email_icon span
+{
+  background-color: #fc2d2d;
+  border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 15px;
+  padding: 3px 4px 2px 5px;
+  position: absolute;
+  right: 0;
+  top: -3px;
+}
+
+dt.skin_email_icon span
+{
+  right: -10px;
+  top: -5px;
+}
+
+
+.UserAmount {
+  color: #F13131 !important;
+  font-family: microsoft yahei;
+  font-weight: bold;
+  letter-spacing: -1px;
+    font-size: 17px;
+}
+
+.mem-icon {
+  background-image: url("/skin/images/mem-icon.png") !important;
+}
+
+
+
+.row-2, .onPayment-leftcontent {
+  background: #f3f3f3 none repeat scroll 0 0 !important;
+  clear: both;
+  height: 600px;
+  padding: 28px 20px 20px;
+  text-align: left;
+  width: 260px;
+}
+
+.model_child_content{
+    width: 1035px;
+    height: 600px;
+    float: left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #ffffff !important;
+    behavior: url("../css3pie/PIE.htc");
+}
+
+.tableContent {
+  background: #f9f9f9 none repeat scroll 0 0 !important;
+  height: 413px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: 10px;
+}
+
+.gh-con-1.norecordChase .divTable:first-child {
+    height: 305px;
+    background-color: #f9f9f9 !important;
+}
+
+
+.game-jackpot-rb li {
+  background-image: url("/skin/images/sprites2.png") !important;
+  background-position: -36px -3px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-shadow: 0 3px 6px rgba(255, 18, 57, 0.44);
+  color: #fff;
+  font-family: "Microsoft YaHei";
+  font-size: 28px;
+  font-weight: bold;
+  height: 52px;
+  line-height: 52px;
+  margin-bottom: 0;
+  margin-left: 5px;
+  margin-right: 2px;
+  margin-top: 0;
+  text-align: center;
+  width: 52px;
+}
+
+#bindCardForm .rsDropdowns .rs120 .chosen-container,
+#bindCardForm  div.rs258,
+#bindCardForm  .rsDropdown.rs258 .chosen-container
+{
+  background-image: url("/skin/images/sprites2.png") no-repeat !important;
+}
+
+.input-RL {
+  background-image: url("/skin/images/mem-icon2.png") !important;
+  background-position: -9px -152px;
+  background-repeat: no-repeat;
+  width: 176px;
+  height: 37px;
+  margin-right: 20px;
+}
+
+/* .agentGAU .slect-box-custom {
+  background-image: url('/skin/images/mem-icon2.png') !important;
+  background-repeat: no-repeat;
+    background-position: -8px -307px;
+    text-align: center;
+    width: 134px;
+  height: 45px;
+  padding-top: 10px;
+} */
+
+.csCheckBox {
+  background-image: url("/skin/images/mem-icon2.png") !important;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-position: -58px -272px;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+
+
+.dira-regdline-gb-list .dira-regdline-gb-listitem input[type="button"].plus{
+  background-image: url('/skin/images/images/betting-sprites.png') no-repeat -277px -98px !important;
+  margin-left: 13px;
+}
+
+
+.yellow-bg {
+  background-color: #fff4f0 !important;
+}
+
+.gh-con-1.gameHistory .divTable:first-child {
+/*     height: 320px; */
+  background-color: #fff4f0 !important;
+}
+.gh-con-1.changeAccount .divTable:first-child {
+    height: 100%;
+    background-color: #fff4f0 !important;
+}
+
+.palStatements .prsnl-arrowin-con ul li {
+    /* height: 35px;
+  width: 68px; */
+  background-repeat: no-repeat;
+  /* background-position:  -12px -11px; */
+  text-align: center;
+  cursor: pointer;
+    /* padding: 5px 0 0 0; */
+}

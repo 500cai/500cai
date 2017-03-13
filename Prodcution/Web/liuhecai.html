@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=Edge">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www500vip.com/500vip/statics/images/favicon.ico" media="screen">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=yes">
+
+    <meta name="format-detection" content="telephone=no">
+    <title>开奖公告</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/dialog_box.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="./js/lib/jquery.timepicker/jquery-ui-timepicker.css" />
+    <link rel="stylesheet" type="text/css" href="./css/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/popups_model.css" />
+    <link rel="stylesheet" type="text/css" href="./skin/css/skin.css" />
+    <link media="all" href="css/500vip-icomoon.css" type="text/css" rel="stylesheet" />
+    <!--[if lte IE 8]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 7]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 6]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <link rel="stylesheet" href="mc/v.1.0.0/mc_lotto.css"/>
+    <link rel="stylesheet" href="mc/v.1.0.0/mc_icon.css"/>
+    <link rel="stylesheet" href="ac/v.1.0.0/ac_lotto.css"/>
+	
+	<script type="text/javascript" src="./js/lib/jquery-1.11.1.min.js"></script> 
+</head>
+
+<body>
+    <div class="header-plus" id="header_plus">
+        <div class="header-toptray-plus" style="">
+            <div class="quick-tpis" id="sys_tip_outer">
+                <i class="icon-acc"></i>
+                <!-- 这里是跑马灯<marquee>标签，由js加入dom  -->
+                <marquee id="sys_tip" behavior="scroll"></marquee>
+            </div>
+        </div>
+        <div class="liansai-wrap" id="liansai-wrap">
+            <!-- 头部 -->
+            <div class="liansai" id="head_top">
+                <div class="wrapper clearfix relative">
+                    <div>
+                        <h1 class="sprite sprite-logo"></h1>
+                    </div>
+                    <div id="header_user_login" class="wrap-login" hidden="">
+                        <div class="logxinxi" id="logxinxi">
+                            <form id="loginForm">
+                            <div class="top_login">
+                                <div style="float:right;">
+                                    <div class="top-login-bg">
+                                        <input class="top_loginip" name="username" type="text" placeholder="用户名：">
+                                    </div>
+                                    <div class="top-login-bg">
+                                        <input class="top_loginip" name="password" type="password" placeholder="密码：">
+                                    </div>
+                                    <div id="need_captcha" class="need_captcha">
+                                        <div class="top_click" name="div_top_click">
+                                            <!-- no delete -->
+                                        </div>
+                                        <div class="yanzhengma">
+                                            <div class="top-login-bg2">
+                                                <label>验证码：</label>
+                                                <input class="top_loginmm" name="authnum" maxlength="4" type="text">
+                                                <span class="register_captcha_span" style="margin:0; position: relative;">
+                                                    <img name="login_img" class="login_img">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input class="dr_anniu form-submit" type="button" name="login" value="登录">
+                                    <input class="dr_anniu reg_anniu" type="button" onclick="__openWin(&#39;reg&#39;,&#39;/register/index.html&#39;)" value="注册">
+                                </div>
+                                <input type="hidden" name="ref_url" value="">
+                                <input type="hidden" name="form_submit" value="ok">
+                                <input type="hidden" name="formhash" value="">
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="header_user" class="logxinxi" hidden="">
+                        <div class="top_login">
+                            <span>您好，<a onclick="__openWin(&#39;user_center&#39;,&#39;/userCenter/index.html&#39;);" rel="nofollow" class="play-jl" target="_blank" name="user_name"></a></span>
+                            <span>可用余额：</span>
+                            <span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span><span id="header_money_refresh"><i class="icon-refresh-icon"></i></span></a>
+                            </span>
+                            <span></span>
+                            <span>
+                                    &nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/userCenter/index.html&#39;);">用户中心</a>&nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/deposit/index.html&#39;);">充值</a>&nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/withdraw/index.html&#39;);">提现</a>&nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/userCenter/accountDetail.html&#39;);">交易记录</a>&nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/userCenter/privateMsg.html&#39;);">个人消息</a>&nbsp;|&nbsp;
+                                <a onclick="__openWin(&#39;lgOut&#39;,&#39;/index/logOut.html&#39;)">退出</a>&nbsp;
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-navbar-plus">
+                <div class="wrapper clearfix" id="header_box">
+                    <div class="lottery-plus" id="lotterys">
+                        <h2>选择彩种 <a class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+                        <div class="lotterys-list-hd" id="lotterysList" style="display: none;">
+                            <ul class="lottery-list-box" id="lottery-list-box">
+                                <li class="mainGame"><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;);" class="mainA"><i class="icon nav40-9"><img src="./images/rule/51.png"></i><span class="color333">三分时时彩</span></a>
+                                    <a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;);" target="_blank" class="status-desc"></a>
+                                </li>
+                                <li class="mainGame"><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;);" class="mainA"><i class="icon nav40-9"><img src="./images/rule/5.png"></i><span class="color333">重庆时时彩</span></a><span class="normal-desc">最火爆的快彩</span></li>
+                                <li class="mainGame"><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;);" class="mainA"><i class="icon nav40-9"><img src="./images/rule/9.png"></i><span class="color333">北京PK拾</span></a><span class="normal-desc">彩友中200注</span></li>
+                                <li class="mainGame"><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html?gameId=42&#39;);" class="mainA"><i class="icon nav40-9"><img src="./images/rule/42.png"></i><span class="color333">新加坡28</span></a><span class="normal-desc"></span></li>
+                                <li class="mainGame"><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/npk10.html&#39;);" class="mainA"><i class="icon nav40-9"><img src="./images/rule/52.png"></i><span class="color333">三分PK拾</span></a><span class="normal-desc"></span></li>
+                                <li class="mainGame"><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;);" class="mainA"><i class="icon nav40-9"><img src="./images/rule/18.png"></i><span class="color333">香港⑥合彩</span></a><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;);" target="_blank" class="status-desc">每周开奖三期</a></li>
+                                <li class="allGames clearfix" data-type="1">
+                                    <h3><span>高频彩</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;);">三分时时彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;);">重庆时时彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;);">北京PK拾</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html?gameId=42&#39;);">新加坡28</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/npk10.html&#39;);">三分PK拾</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameSsl/index.html&#39;);">上海时时乐</a></li>
+                                    </ul><i class="icon" id="open-btn-1" style="display: block;"></i>
+                                    <div class="line-fff"></div>
+                                    <div class="moreGames clearfix" style="display: none;" id="moreGames_1">
+                                        <div class="moreGames-box fl">
+                                            <div class="otherGames num-games">
+                                                <h3>高频彩</h3>
+                                                <ol>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;);">三分时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;);">重庆时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;);">北京PK拾</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html?gameId=42&#39;);">新加坡28</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/npk10.html&#39;);">三分PK拾</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameSsl/index.html&#39;);">上海时时乐</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/tjssc.html&#39;);">天津时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/xjssc.html&#39;);">新疆时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/jsks.html&#39;);">江苏快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sd.html&#39;);">山东11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sh.html&#39;);">上海11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/jx.html&#39;);">江西11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/gd.html&#39;);">广东11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/gxks.html&#39;);">广西快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html&#39;);">北京28</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/ahks.html&#39;);">安徽快三</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="allGames" data-type="2">
+                                    <h3><span>低频彩</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;);">香港⑥合彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/fcsd.html&#39;);">福彩3D</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/tcps.html&#39;);">排列三</a></li>
+                                    </ul>
+                                </li>
+                                <li class="allGames clearfix" data-type="3">
+                                    <h3><span>全部</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;);">三分时时彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;);">重庆时时彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;);">北京PK拾</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html?gameId=42&#39;);">新加坡28</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/npk10.html&#39;);">三分PK拾</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;);">香港⑥合彩</a></li>
+                                    </ul><i class="icon" id="open-btn-1" style="display: block;"></i>
+                                    <div class="line-fff"></div>
+                                    <div class="moreGames clearfix" style="display: none;" id="moreGames_3">
+                                        <div class="moreGames-box fl">
+                                            <div class="otherGames num-games">
+                                                <h3>全部</h3>
+                                                <ol>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;);">三分时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;);">重庆时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;);">北京PK拾</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html?gameId=42&#39;);">新加坡28</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/npk10.html&#39;);">三分PK拾</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;);">香港⑥合彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameSsl/index.html&#39;);">上海时时乐</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/tjssc.html&#39;);">天津时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/xjssc.html&#39;);">新疆时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/jsks.html&#39;);">江苏快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sd.html&#39;);">山东11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sh.html&#39;);">上海11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/jx.html&#39;);">江西11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/gd.html&#39;);">广东11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/gxks.html&#39;);">广西快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html&#39;);">北京28</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/ahks.html&#39;);">安徽快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/fcsd.html&#39;);">福彩3D</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/tcps.html&#39;);">排列三</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul id="head_menu" class="nav-plus clearfix">
+                        <li><a data-url="/" onclick="__openWin(&#39;home&#39;,&#39;/&#39;);">首页</a></li>
+                        <li><a data-url="/index/lobby.html" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/index/lobby.html&#39;);" target="_blank">购彩大厅</a></li>
+                        <li><a data-url="/index/mobile.html" onclick="__openWin(&#39;home_phone&#39;,&#39;/index/mobile.html&#39;);">手机购彩</a><em class="hot-icon"></em></li>
+                        <li><a data-url="/promotion/index.html" onclick="__openWin(&#39;home2&#39;,&#39;/promotion/index.html&#39;);">优惠活动</a><em class="hot-icon"></em></li>
+                        <li><a data-url="/draw/index.html" onclick="__openWin(&#39;home2&#39;,&#39;/draw/index.html&#39;)" class="dropdown-desc">开奖公告</a> </li>
+                        <li><a data-url="/trend/trendList.html" onclick="__openWin(&#39;home2&#39;,&#39;/trend/trendList.html&#39;)">走势图表</a></li>
+                        <li><a data-url="/news/index.html" onclick="__openWin(&#39;home2&#39;,&#39;/news/index.html&#39;)">资讯</a></li>
+                    </ul>
+                    <div class="quick-list">
+                        <a onclick="__openWin(&#39;other&#39;,window._layout.kf_url)" title="联系">客服</a>
+                        <a onclick="__openWin(&#39;home2&#39;,&#39;/helpCenter/index.html&#39;)">帮助</a>
+                        <a onclick="__openWin(&#39;home2&#39;,&#39;/rule/index.html&#39;)">玩法</a>
+                        <a id="agent_reg_url" onclick="__openWin(&#39;login&#39;,&#39;/register/agent.html&#39;)" title="加入代理">代理</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <link rel="stylesheet" href="./images/rule/rule.css" type="text/css">
+    <link rel="stylesheet" href="./images/rule/rule(1).css" type="text/css">
+    <div class="wrap-bg" style="min-height: 831px;">
+        <div class="rule-box clearfix">
+            <div id="left" class="rule-left">
+
+                <div class="lbar"><span>玩法规则</span></div>
+
+                <div class="list" style="">
+                    <ul>
+                        <li class="game-1"><a href="fcsd.html">福彩3D</a></li>
+                        <li class="game-2"><a href="pls.html">排列三</a></li>
+                        <li class="game-5"><a href="cqssc.html">重庆时时彩</a></li>
+                        <li class="game-4"><a href="tjssc.html">天津时时彩</a></li>
+                        <li class="game-7"><a href="xjssc.html">新疆时时彩</a></li>
+                        <li class="game-3"><a href="shssc.html">上海时时乐</a></li>
+                        <li class="game-12"><a href="elevenSd.html">山东11选5</a></li>
+                        <li class="game-13"><a href="elevenSh.html">上海11选5</a></li>
+                        <li class="game-14"><a href="elevenJx.html">江西11选5</a></li>
+                        <li class="game-15"><a href="elevenGd.html">广东11选5</a></li>
+                        <li class="game-9"><a href="bjsc.html">北京PK拾</a></li>
+                        <li class="game-10"><a href="jsks.html">江苏快三</a></li>
+                        <li class="game-11"><a href="ahks.html">安徽快三</a></li>
+                        <li class="game-17"><a href="gxks.html">广西快三</a></li>
+                        <li class="game-18 current"><a href="liuhecai.html">香港⑥合彩</a></li>
+                        <li class="game-41"><a href="xy28.html">北京28</a></li>
+                        <li class="game-42"><a href="xjp28.html">新加坡28</a></li>
+                        <li class="game-51"><a href="sfcp.html">三分时时彩</a></li>
+                        <li class="game-52"><a href="xpk10.html">三分PK拾</a></li>
+                    </ul>
+                </div>
+
+                <div class="lbot"></div>
+            </div>
+            <div class="rule-right">
+                <div class="rtop"></div>
+                <div id="rcont">
+                    <!-- begin -->
+                    <div class="rbar">
+                        <h1><span class="gamek-18">香港⑥合彩玩法规则</span></h1>
+                    </div>
+                    <div class="rcon">
+                        <h2><a href="liuhecai.html#1">一、重要声明</a></h2>
+                        <h2><a href="liuhecai.html#2">二、开奖与购买方式</a></h2>
+                        <h2><a href="liuhecai.html#3">三、兑奖</a></h2>
+                        <h2><a href="liuhecai.html#4">四、六合彩玩法说明</a></h2>
+                        <br>
+
+                        <b><p id="1">一、重要声明</p></b> 1. 如果客户怀疑自己的资料被盗用，应立即通知本站，并更改详细数据，以前的使用者名称及密码将全部无效。
+                        <br>2. 客户有责任确保自己的账户及登录资料的保密性。以使用者名称及密码进行的任何网上投注将被视为有效。
+                        <br>3. 公布赔率时出现的任何打字错误或非故意人为失误，本公司保留改正错误和按正确赔率结算投注的权力。
+                        <br>4. 每次登录时客户都应该核对自己的账户结余额。如对余额有任何疑问，请在第一时间内通知本站客服人员。
+                        <br>5. 一旦投注被接受，则不得取消或修改。
+                        <br>6. 所有号码赔率将不时浮动，派彩时的赔率将以确认投注时之赔率为准。
+                        <br>7. 所有投注都必须在开奖前时间内进行否则投注无效。
+
+                        <b><p id="2">二、开奖与购买方式</p></b> 1. 六合彩是从1至49个号码中选出六个为中奖号码的奖券，由香港赛马会的附属公司「香港马会奖券有限公司」经办 。六合彩每星期搅珠三次，通常于星期二、星期四及非赛马日之星期六或日晚上举行，并由电视台现场直播。
+                        <br>2. 六合彩注项单位每注金额最低1元。选择投注项时，购买者可预设金额，然后对其选定的投注号码进行投注。
+                        <br>3. 如果用户投注成功后，若因销售终端故障、通讯线路故障和投注站信用额度受限等原因造成当期无法开奖的，应退还购买者投注金额。
+
+                        <b><p id="3">二、兑奖</p></b> 1. 无论大小奖均返还至用户在本站的账户中，一旦用户中奖，系统将自动返还中奖金额。可继续投注或提款，永无弃奖。
+
+                        <b><p id="4">四、六合彩玩法说明</p></b>
+                        <div align="center">
+                            <img src="./images/rule/rule.six.p1.png">
+                        </div>
+                        <p>（一）特码</p>
+                        <p>1. 特码</p>
+                        香港⑥合彩公司当期开出的最后一码为特码
+                        <table width="300" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC" class="s-table">
+                            <tbody>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF" rowspan="2">例：</td>
+                                    <td height="25" bgcolor="#FFFFFF">开奖号码：30 40 34 08 25 15 + 42</td>
+                                </tr>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">投注特码：42</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>2. 特码大小</p>
+                        <table width="300" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC" class="s-table">
+                            <tbody>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">
+                                        特小：开出的特码，(01~24)小于或等于24
+                                        <br><img src="./images/rule/rule.six.tm1.gif">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">特大：开出的特码，(25~48)大于或等于25
+                                        <br><img src="./images/rule/rule.six.tm2.gif">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">和局：特码为49</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>3. 特码单双</p>
+                        <table width="300" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC" class="s-table">
+                            <tbody>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">
+                                        特双：特码为双数
+                                        <br><img src="./images/rule/rule.six.tm3.gif">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">
+                                        特单：特码为单数
+                                        <br><img src="./images/rule/rule.six.tm4.gif">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">和局：特码为49</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>4. 特码合数单双</p>
+                        <table width="300" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC" class="s-table">
+                            <tbody>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">
+                                        特双：指开出的特码，个位加上十位之和为‘双数’
+                                        <br><img src="./images/rule/rule.six.tm5.gif">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">
+                                        特单：指开出的特码，个位加上十位之和为‘单数’
+                                        <br><img src="./images/rule/rule.six.tm6.gif">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">和局：特码为49</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>5. 特码尾数大小</p>
+                        特尾大：5尾~9尾为大，如：05、18、19
+                        <br>特尾小：0尾~4尾为小，如：01、32、44
+                        <br>和局：特码为49
+
+                        <p>6. 特码半特</p>
+                        以特码大小与特码单双游戏为一个投注组合；当期特码开出符合投注组合，即视为中奖；若当期特码开出49号，其余情形视为不中奖。
+                        <br>大单：25、27、29、31、33、35、37、39，41、43、45、47
+                        <br>大双：26、28、30、32、34、36、38、40，42、44、46、48
+                        <br>小单：01、03、05、07、09、11、13、15，17、19、21、23
+                        <br>小双：02、04、06、08、10、12、14、16，18、20、22、24
+                        <br>和局：特码为49时。
+                        <p>7. 特码合数大小</p>
+                        以特码个位和十位数字之和值来判断胜负，和值大于6为合数大，如07、17、26、36、44；和值小于7为合数小，如01、12、23、32、42；开出49则视为和局。
+                        <p>8. 半波</p>
+                        以特码色波和特单，特双，特大，特小为一个投注组合，当期特码开出符合投注组合，即视为中奖； 若当期特码开出49号，则视为和局；其余情形视为不中奖。
+
+                        <p>9. 半半波</p>
+                        以特码色波和特单双及特大小等游戏为一个投注组合，当期特码开出符合投注组合，即视为中奖； 若当期特码开出49号，则视为和局；其余情形视为不中奖。
+
+                        <p>10. 特码色波</p>
+                        香港⑥合彩49个号码球分别有红、蓝、绿三种颜色，以特码开出的颜色和投注的颜色相同视为中奖，颜色代表如下:
+                        <br>红波：01 ,02 ,07 ,08 ,12 ,13 ,18 ,19 ,23 ,24 ,29 ,30 ,34 ,35 ,40 ,45 ,46
+                        <br>蓝波：03 ,04 ,09 ,10 ,14 ,15 ,20 ,25 ,26 ,31 ,36 ,37 ,41 ,42 ,47 ,48
+                        <br>绿波：05 ,06 ,11 ,16 ,17 ,21 ,22 ,27 ,28 ,32 ,33 ,38 ,39 ,43 ,44 ,49
+
+                        <p>11. 特码头数</p>
+                        特码头数：是指特码属头数的号码
+                        <br>"0"头：01、02、03、04、05、06、07、08、09
+                        <br>"1"头：10、11、12、13、14、15、16、17、18、19
+                        <br>"2"头：20、21、22、23、24、25、26、27、28、29
+                        <br>"3"头：30、31、32、33、34、35、36、37、38、39
+                        <br>"4"头：40、41、42、43、44、45、46、47、48、49
+                        <br>例如：开奖结果特别号码为21则2头为中奖，其他头数都不中奖。
+                        <p>12. 特码尾数</p>
+                        特码尾数：是指特码属尾数的号码。
+                        <br>"0"尾：10、20、30、40
+                        <br>"1"尾：01、11、21、31、41
+                        <br>"2"尾：02、12、22、32、42
+                        <br>"3"尾：03、13、23、33、43
+                        <br>"4"尾：04、14、24、34、44
+                        <br>"5"尾：05、15、25、35、45
+                        <br>"6"尾：06、16、26、36、46
+                        <br>"7"尾：07、17、27、37、47
+                        <br>"8"尾：08、18、28、38、48
+                        <br>"9"尾：09、19、29、39、49
+                        <br>例如：开奖结果特别号码为21则1尾数为中奖，其他尾数都不中奖。
+
+                        <p>（二）正码</p>
+                        香港⑥合彩公司每期开出的前面六个号码为正码，下注号码如在六个正码号码里中奖。
+                        <table width="300" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC" class="s-table">
+                            <tbody>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF" rowspan="2">例：</td>
+                                    <td height="25" bgcolor="#FFFFFF">开奖号码：30 40 34 08 25 15 + 42</td>
+                                </tr>
+                                <tr align="center">
+                                    <td height="25" bgcolor="#FFFFFF">投注正码：30 40 34 08 25 15</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>1. 总和大小</p>
+                        总和大：以七个开奖号码的分数总和大于或等于175。
+                        <br>总和小：以有七个开奖号码的分数总和小于或等于174。
+
+                        <p>2. 总和单双</p>
+                        总和单：以七个开奖号码的分数总和是‘单数’，如分数总和是133、197。
+                        <br>总和双：以七个开奖号码的分数总和是‘双数’，如分数总和是120、188。
+
+                        <p>3. 正码特</p>
+                        当期开奖的前面6个号码，按开奖出来的先后顺序依次分为：正1特、正2特、正3特、正4特、正5特、正6特。其下注的正码特号与现场摇珠开出之正码其开奖顺序及开奖号码相同，视为中奖。
+                        <br>如：19,47,22,12,40,36+X 投注，正1特-19、正2特-47、正3特-22、正4特-12、正5特-40、正6特-36 当中的任意一项都中奖，投注正码特，其它号码如，正1特-47、正4特-36 不中奖。
+
+                        <p>4. 正码1-6</p>
+                        香港⑥合彩公司当期开出之前6个号码叫正码。第一时间出来的叫正码1，依次为正码2、正码3┅┅ 正码6(并不以号码大小排序)。正码1、正码2、正码3、正码4、正码5、正码6的大小单双合单双和特别号码的大小单双规则相同，如正码1为31，则正码1为大，为单，为合双，为合小；正码2为08，则正码2为小，为双，为合双，为合大；号码为49则为和。假如投注组合符合中奖结果，视为中奖。正码1-6色波下注开奖之球色与下注之颜色相同时，视为中奖。其余情形视为不中奖。
+
+                        <p>5. 尾数</p>
+                        含有所属尾数的一个或多个号码，但派彩只派一次，即不论同尾数号码出现一个或多个号码都只派彩一次。
+                        <br>"0"尾：10、20、30、40
+                        <br>"1"尾：01、11、21、31、41
+                        <br>"2"尾：02、12、22、32、42
+                        <br>"3"尾：03、13、23、33、43
+                        <br>"4"尾：04、14、24、34、44
+                        <br>"5"尾：05、15、25、35、45
+                        <br>"6"尾：06、16、26、36、46
+                        <br>"7"尾：07、17、27、37、47
+                        <br>"8"尾：08、18、28、38、48
+                        <br>"9"尾：09、19、29、39、49
+                        <br>例如：开奖结果正码号码为11、31、42、44、35、32特别号码为21则1尾2尾4尾5尾都为中奖，其他尾数都不中奖。（请注意:49亦算输赢，不为和）。
+                        <p>（三）连码</p>
+                        1. 三中二：所投注的每三个号码为一组合，若其中2个是开奖号码中的正码，即为三中二，视为中奖；若3个都是开奖号码中的正码，即为三中二之中三，其余情形视为不中奖，如06、07、08 为一组合，开奖号码中有06、07两个正码，没有08，即为三中二，按三中二赔付；如开奖号码中有06、07、08三个正码，即为三中二之中三，按中三赔付；如出现1个或没有，视为不中奖 。
+                        <br>2. 四全中：选择投注号码每四个为一组（四个或四个以上），兑奖号为正码，如四个号码都在开奖号码的正码里面，视为中奖，其他情形都视为不中奖 。
+                        <br>3. 三全中：所投注的每三个号码为一组合，若三个号码都是开奖号码之正码，视为中奖，其余情形视为不中奖。如06、07、08三个都是开奖号码之正码，视为中奖，如两个正码加上一个特别号码视为不中奖 。
+                        <br>4. 二全中：所投注的每二个号码为一组合，二个号码都是开奖号码之正码，视为中奖，其余情形视为不中奖（含一个正码加一个特别号码之情形）。
+                        <br>5. 二中特：所投注的每二个号码为一组合，二个号码都是开奖号码之正码，叫二中特之中二；若其中一个是正码，一个是特别号码，叫二中特之中特；其余情形视为不中奖 。
+                        <br>6. 特串：所投注的每二个号码为一组合，其中一个是正码，一个是特别号码，视为中奖，其余情形视为不中奖（含二个号码都是正码之情形） 。
+                        <p>（四）生肖</p>
+                        <p>1. 特码生肖</p>
+                        天肖：兔马猴猪牛龙。
+                        <br>地肖：鼠虎蛇羊鸡狗。
+                        <br>家肖：羊马牛猪狗鸡。
+                        <br>野肖：猴蛇龙兔虎鼠。
+                        <br>前肖：鼠牛虎兔龙蛇。
+                        <br>后肖：马羊猴鸡狗猪。
+
+                        <p>2. 特码生肖</p>
+                        生肖顺序为 鼠 &gt;牛 &gt;虎 &gt;兔 &gt;龙 &gt;蛇 &gt;马 &gt;羊 &gt;猴 &gt;鸡 &gt;狗 &gt;猪 。
+                        <br>如今年是鸡年，就以鸡为开始，依顺序将49个号码分为12个生肖 『如下』
+                        <br>鸡：01、13、25、37、49
+                        <br>狗：12、24、36、48
+                        <br>猪：11、23、35、47
+                        <br>鼠：10、22、34、46
+                        <br>牛：09、21、33、45
+                        <br>虎：08、20、32、44
+                        <br>兔：07、19、31、43
+                        <br>龙：06、18、30、42
+                        <br>蛇：05、17、29、41
+                        <br>马：04、16、28、40
+                        <br>羊：03、15、27、39
+                        <br>猴：02、14、26、38
+                        <br>若当期特别号，落在下注生肖范围内，视为中奖 。
+                        <br>例如：开奖：XXXXXX+18 为特码-龙，投注特码-龙即中奖，投注特码其它生肖不中奖。
+
+                        <p>3. 正肖</p>
+                        当期开奖的前6个号码(不含特码，不分先后顺序)，其中有一个球号在投注的生肖范围即算中奖。如果有多个球号开在投注生肖范围内，派彩金额将自动倍增。
+
+                        <p>4. 一肖</p>
+                        当期开奖的全部号码(前6个号码和特码)，其中只要有一个球号在投注的生肖范围则中奖；没有一个球号在投注的生肖范围内，则不中奖；多个球号在投注生肖范围内，则中奖；但奖金不倍增，派彩只派一次，即不论同生肖号码出现一个或多个号码都只派一次。
+                        <p>（四）对碰</p>
+                        1. 生肖（尾数）所对应的号码和特码生肖（尾数）项目的一样；一个生肖（尾数）对应多个号码，不论同生肖（尾数）的号码出现一个或多个，派彩只派一次。每个生肖（尾数）都有自己的赔率，下注组合的总赔率，取该组合生肖（尾数）的最低赔率为总赔率。
+                        <br>2. 二连尾:选择二个尾数为一投注组合进行下注。该注的二个尾数必须在当期开出的7个开奖号码相对应的尾数中，视为中奖。
+                        <br>3. 三连尾:选择三个尾数为一投注组合进行下注。该注的三个尾数必须在当期开出的7个开奖号码相对应的尾数中，视为中奖。
+                        <br>4. 四连尾:选择四个尾数为一投注组合进行下注。该注的四个尾数必须在当期开出的7个开奖号码相对应的尾数中，视为中奖。
+                        <br>5. 五连尾:选择五个尾数为一投注组合进行下注。该注的五个尾数必须在当期开出的7个开奖号码相对应的尾数中，视为中奖。
+                        <br>6. 二连肖:选择二个生肖为一投注组合进行下注。该注的二个生肖必须在当期开出的7个开奖号码相对应的生肖中，视为中奖。
+                        <br>7. 三连肖:选择三个生肖为一投注组合进行下注。该注的三个生肖必须在当期开出的7个开奖号码相对应的生肖中，视为中奖。
+                        <br>8. 四连肖:选择四个生肖为一投注组合进行下注。该注的四个生肖必须在当期开出的7个开奖号码相对应的生肖中，视为中奖。
+                        <br>9. 五连肖:选择五个生肖为一投注组合进行下注。该注的五个生肖必须在当期开出的7个开奖号码相对应的生肖中，视为中奖。
+                        <p>（五）合肖</p>
+                        挑选2-11个生肖『排列如同生肖』为一个组合，并选择开奖号码的特码是否在此组合内『49号除外』，即视为中奖；若当期特码开出49号，则所有组合皆视为和局。
+
+                        <p>（六）自选不中</p>
+                        <p>
+                            挑选最少6个号码为一投注组合进行下注。当期开出的7个开奖号码都没有在该下注组合中，即视为中奖。每个号码都有自己的赔率，下注组合的总赔率，取该组合号码的最低赔率为总赔率。如下注组合为1-2-3-4-5-13，开奖号码为6，7，8，9，10，11，12，即为中奖，如果开奖号码为5，6，7，8，9，10，11，则为不中奖。
+
+                        </p>
+                        <p>（七）总肖</p>
+                        当期号码(所有正码与最后开出的特码)开出的不同生肖总数，与所投注之预计开出之生肖总和数(不用指定特定生肖)，则视为中奖，其余情形视为不中奖。例如：如果当期号码为19、24、12、34、40、39 特别号：49，总计六个生肖，若选总肖【6】则为中奖(请注意：49号亦算输赢，不为和）。
+
+                        <p>（八）总肖单双</p>
+                        当期号码（正码和特码）开出的不同生肖总数若为单数则为单，若为双数则为双。
+
+                        <p>（九）七色波</p>
+                        以开出的7个色波，那种颜色最多为中奖。 开出的6个正码各以1个色波计，特别号以1.5个色波计。而以下3种结果视为和局。
+                        <br>1： 6个正码开出3蓝3绿，而特别码是1.5红
+                        <br>2： 6个正码开出3蓝3红，而特别码是1.5绿
+                        <br>3： 6个正码开出3绿3红，而特别码是1.5蓝
+                        <br>如果出现和局，所有投注红，绿，蓝七色波的金额将全数退回，玩家也可投注和局
+
+                        <p>（十）五行</p>
+                        挑选一个五行选项为一个组合，若开奖号码的特码在此组合内，即视为中奖；若开奖号码的特码不在此组合内，即视为不中奖；
+                        <br>金：03、04、17、18、25、26、33、34、47、48
+                        <br>木：07、08、15、16、29、30、37、38、45、46
+                        <br>水：05、06、13、14、21、22、35、36、43、44
+                        <br>火：01、02、09、10、23、24、31、32、39、40
+                        <br>土：11、12、19、20、27、28、41、42、49
+
+                        <!-- end -->
+                    </div>
+                    <div class="rcon"><a href="liuhecai.html#top"><span>回到顶部</span></a></div>
+                    <div class="rbot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="_foot_home">
+            <div class="foot_box">
+                <div class="about_box">
+                    <ul class="foot_info">
+                        <li class="foot_wljc"></li>
+                        <li class="foot_wangan"></li>
+                        <li class="foot_wsjy"></li>
+                        <li class="foot_xylh"></li>
+                        <li class="foot_kxwz"></li>
+                    </ul>
+                    <p>2009-2017©<a>500vip彩票</a> | 客服邮箱：<a href="mailto:500vipkf@gmail.com"><span class="eng">500vipkf@gmail.com </span></a> | 客服QQ：
+                        <a href="tencent://message/?uin=917500500&amp;Site=500vip%E5%BD%A9%E7%A5%A8&amp;Menu=yes"><span class="eng">917500500</span></a> |
+                        <br><span class="">500vip彩票郑重提示：彩票有风险，投注需谨慎！</span> 不向未满18周岁的青少年出售彩票</p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 更新浏览器 -->
+        <div class="ie-alert-wrap" style="display: none;">
+            <h1>是时候升级你的浏览器了</h1>
+            <p>你正在使用 Internet Explorer 的早期版本（IE9以下版本 或使用该内核的浏览器）。这意味着在升级浏览器前，你将无法访问此网站。</p>
+            <hr>
+            <h2>请注意：Windows XP 及 Internet Explorer 早期版本的支持已经结束</h2>
+            <p>自 2016 年 1 月 12 日起，Microsoft 不再为 IE 11 以下版本提供相应支持和更新。没有关键的浏览器安全更新，您的 PC 可能易受有害病毒、间谍软件和其他恶意软件的攻击，它们可以窃取或损害您的业务数据和信息。请参阅 <a href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support">微软对 Internet Explorer 早期版本的支持将于 2016 年 1 月 12 日结束的说明</a> 。</p>
+            <hr>
+            <h2>更先进的浏览器</h2>
+            <p>推荐使用以下浏览器的最新版本。如果你的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<b id="referrer"></b>即可。</p>
+            <ul class="browser">
+                <li class="browser-chrome"><a href="http://www.google.cn/chrome/browser/index.html?hl=zh-CN&amp;standalone=1" target="_blank"> 谷歌浏览器<span>Google Chrome</span></a></li>
+                <li class="browser-360"><a href="http://se.360.cn/" target="_blank"> 360安全浏览器 <span>360用户推荐</span></a></li>
+                <!-- 2016-08-06 -->
+                <li class="browser-firefox"><a href="http://www.firefox.com.cn/" target="_blank"> 火狐浏览器<span>Mozilla Firefox</span></a></li>
+                <li class="browser-ie"><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank"> IE浏览器<span>Internet Explorer</span></a></li>
+                <li class="browser-qq"><a href="http://browser.qq.com/" target="_blank"> QQ浏览器9 <span>全新升级版本</span></a></li>
+                <!-- 9.4.8187.400 -->
+
+                <div class="clean"></div>
+            </ul>
+            <hr>
+            <h2>为什么会出现这个页面？</h2>
+            <p>如果你不知道升级浏览器是什么意思，请请教一些熟练电脑操作的朋友。如果你使用的不是IE6/7/8/9/10，而是360浏览器、QQ浏览器、搜狗浏览器等，出现这个页面是因为你使用的不是该浏览器的最新版本，升级至最新即可。</p>
+            <hr>
+        </div>
+        <div class="ie-alert-bg" style="display: none;"></div>
+        <!-- start :  浮动图标  -->
+        <div id="_leftAD" class="_float_AD l_AD">
+			<img src="./images/float_left.png">
+			<div name="close_btn"></div>
+			<a class="top1_btn" href="tencent://message/?uin=917500500&amp;Site=500vip%E5%BD%A9%E7%A5%A8&amp;Menu=yes"></a>
+			<div class="top2_btn" onclick="__openWin(&#39;reg&#39;,&#39;/register/regPlay.html&#39;)"></div>
+			<div class="two_img"><img src="./images/getAndroidPng.html"></div>
+		</div>
+		<div id="_rightAD" class="_float_AD r_AD">
+			<img src="./images/float_right.png">
+			<div name="close_btn"></div>
+			<div class="top1_btn" onclick="__openWin(&#39;other&#39;,&#39;http://www.cpzxkf.com/&#39;)"></div>
+			<div class="top2_btn" onclick="__openWin(&#39;other&#39;,&#39;http://www.500vip.cc&#39;)"></div>
+			<div class="two_img"><img src="./images/getIosPng.html"></div>
+		</div>
+       
+
+    </div>
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/rollups/tripledes.js"></script>
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/components/mode-ecb-min.js"></script>
+    <script type="text/javascript" src="common/v.1.0.0/tcg-lib.js"></script>
+    <script type="text/javascript" src="common/v.1.0.0/rsa-lib.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-control.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-ui.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-wps.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-properties.js"></script>
+
+    <script type="text/javascript" src="ac/v.1.0.0/ac-control.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-ui.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-wps.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-properties.js"></script>
+    <script type="text/javascript" src="./js/WPS-api.js"></script>
+    <script type="text/javascript" src="./js/500vip-subcommon.js"></script>
+    <script type="text/javascript" src="./js/500vip-control.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/500vip-ui.js"></script>
+    <script type="text/javascript" src="./js/500vip-prop.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>500vip彩票</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,shrink-to-fit=no, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+
+    <link rel="stylesheet" href="css/lobby.css">
+    <link rel="stylesheet" href="css/Font.css">
+    <link rel="icon" sizes="196x196" href="images/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="196x196" href="images/favicon.png">
+    <link rel="shortcut icon" sizes="196x196" href="images/favicon.png">
+
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="login-back">
+<header class="header login">
+    <nav class="nav">
+        <span class="left icon-arrow-left btn-back"></span>
+        <div>免费试玩</div>
+    </nav>
+</header>
+<section class="central login-reg">
+    <div class="central_body login-reg">
+        <div class="login-div">
+            <div class="register-form">
+                <span class="left">用户账号</span>
+                <input placeholder="请输入用户名" name="demoUsername" maxlength="16"
+                       data-null_error="registerForm_username_required"
+                       data-validation="username" class="" readonly>
+                <span class="right"></span>
+            </div>
+            <div class="register-form">
+                <span class="left">登录密码</span>
+                <input placeholder="请输入密码" name="demoPassword" data-null_error="registerForm_password_required"
+                       data-validation="password" type="password" class="loginInput">
+                <span class="right"></span>
+            </div>
+            <div class="register-form">
+                <span class="left">重复密码</span>
+                <input placeholder="请再次输入密码" name="demoConfirmPass" data-null_error="registerForm_confirmPass_required"
+                       data-validation="confirmPassword" type="password" class="loginInput">
+                <span class="right"></span>
+            </div>
+        </div>
+        <button id="btnSubmitRegister" class="login-btn">立即注册</button>
+        <div class="actions border-hide hide">
+            <span>在线客服</span>
+            <span>已有帐号，直接登录</span>
+        </div>
+        <div class="actions border-hide">
+            <p>1.每个试玩账号初始金额为2000RMB，不允许充值；</p>
+            <p>2.每个IP每天仅允许有3个试玩账号；</p>
+            <p>3.每个试玩账号从注册开始，有效时间为72小时，超过时间系统自动回收；</p>
+            <p>4.试玩账号仅供玩家熟悉游戏，不允许充值和提款；</p>
+            <p>5.试玩账号不享有参加优惠活动的权利；</p>
+            <p>6.试玩账号的赔率仅供参考，可能与正式账号赔率不相符；</p>
+            <p>7.其他未说明事项以本公司解释为准；</p>
+        </div>
+    </div>
+</section>
+</body>
+<script type="text/javascript" src="js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="js/lib/tripledes.js"></script>
+<script type="text/javascript" src="js/lib/RSA-lib.js"></script>
+<script type="text/javascript" src="js/lib/wps-lib.js"></script>
+<script type="text/javascript" src="js/lib/jquery.i18n.properties-1.0.9.js"></script>
+<script type="text/javascript" src="js/lib/tcg-lib.js"></script>
+<script type="text/javascript" src="js/library.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+<script type="text/javascript">
+    controller.register_demo.init();
+</script>
+</html>

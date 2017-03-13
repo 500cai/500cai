@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<div class="jlo dpst-rel-content clearfix">
+		<ul id="yourWithdraw" class="tabs clearfix">
+			<li>
+				<label for="tab1" class="sel tab-btn" data-rel="tab-content1">提现流程</label>
+				<div id="tab-content1" class="tab-content">
+					<p>您好，成功登录平台，点击平台页面 “提款”选择 “提款申请” 选择您在平台绑定的银行卡，输入您的提款金额和您的资金密码，点击确认提款，即可申请提款。</p>
+				</div>
+			</li>
+		  
+			<li>
+				<label for="tab2" class="unsel tab-btn" data-rel="tab-content2">查询流程</label>
+				<div id="tab-content2" class="tab-content">
+					<p>您好，成功登录平台，点击平台页面 “提款”选择 “提款记录” 选择您要查询的状态以及日期，点击 “查询” 即可查看到您的提款详情。若有取款不到账问题，请您及时联系在线客服。</p>
+				</div>
+			</li>
+		  
+			<li>
+				<label for="tab3" class="unsel tab-btn" data-rel="tab-content3">提款类</label>
+				<div id="tab-content3" class="tab-content">
+					<div class="accordions">
+					<h3> 平台提款时间?</h3>
+						<div>
+							<p> 平台提现时间为9：00至次日凌晨2：00</p>
+						</div>
+						<h3>提款有什么要求？</h3>
+						<div>
+							<p>您的有效投注额需要达到充值的30%即可随时申请提款，（比如您充值100元，<span>只要您的有效投注额大于等于30元</span>即可发起提款申请）。</p>
+						</div>
+						
+						<h3>提现有什么限制？</h3>
+						<div>
+							<p>每日可提现次数为5次，提现单笔最低金额为100元，最高200,000元，非平台维护时间均可提现。</p>
+						</div>
+						
+						<h3>提现多久会到？</h3>
+						<div>
+							<p>一般情况下，平台会于30分钟内为您处理到账，具体参照不同银行的系统时间为准。</p>
+						</div>
+						
+						<h3>怎么绑定不了提现卡？</h3>
+						<div>
+							<p>若您无法绑定提现卡，有可能您要绑定的这张卡已经绑定在其它账号：平台规定一张提现卡只能绑定一个账号，建议您绑定另一张提款人姓名一致的银行卡。</p>
+							<p>温馨小贴士：若银行卡绑定错误需删卡，请您联系在线客服，若有造成不便请见谅。</p>
+						</div>
+						
+						<h3>删号后银行卡还可以用吗？</h3>
+						<div>
+							<p>当您的账号被系统删除后，银行卡资料会自动与已删账号解除绑定，您可以将该卡绑定至您新的账号上继续使用。</p>
+						</div>
+						
+						<h3>我不想提现了，怎么取消？</h3>
+						<div>
+							<p>请您第一时间联系2000彩在线客服，提供提现时间、金额、提现银行等信息，客服会立刻为您通知处理。但若通知期间已完成出款则无法取消。</p>
+						</div>
+					</div>	
+				</div>
+			</li>
+			
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+</xml>

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=Edge">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www500vip.com/500vip/statics/images/favicon.ico" media="screen">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=yes">
+
+    <meta name="format-detection" content="telephone=no">
+    <title>开奖公告</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/dialog_box.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="./js/lib/jquery.timepicker/jquery-ui-timepicker.css" />
+    <link rel="stylesheet" type="text/css" href="./css/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/popups_model.css" />
+    <link rel="stylesheet" type="text/css" href="./skin/css/skin.css" />
+    <link media="all" href="css/500vip-icomoon.css" type="text/css" rel="stylesheet" />
+    <!--[if lte IE 8]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 7]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 6]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <link rel="stylesheet" href="mc/v.1.0.0/mc_lotto.css"/>
+    <link rel="stylesheet" href="mc/v.1.0.0/mc_icon.css"/>
+    <link rel="stylesheet" href="ac/v.1.0.0/ac_lotto.css"/>
+	
+	<script type="text/javascript" src="./js/lib/jquery-1.11.1.min.js"></script> 
+</head>
+
+<body class="twlv">
+    <div class="header-plus" id="header_plus">
+        <div class="header-toptray-plus" style="">
+            <div class="quick-tpis" id="sys_tip_outer">
+                <i class="icon-acc"></i>
+                <!-- 这里是跑马灯<marquee>标签，由js加入dom  -->
+                <marquee id="sys_tip" behavior="scroll"></marquee>
+            </div>
+        </div>
+        <div class="liansai-wrap" id="liansai-wrap">
+            <!-- 头部 -->
+            <div class="liansai" id="head_top">
+                <div class="wrapper clearfix relative">
+                    <div>
+                        <h1 class="sprite sprite-logo"></h1>
+                    </div>
+                    <div id="header_user_login" class="wrap-login" hidden="">
+                        <div class="logxinxi" id="logxinxi">
+
+                        <form id="loginForm">
+                            <div class="top_login">
+                                <div style="float:right;">
+                                    <div class="top-login-bg">
+                                        <input class="top_loginip" name="username" type="text" placeholder="用户名：">
+                                    </div>
+                                    <div class="top-login-bg">
+                                        <input class="top_loginip" name="password" type="password" placeholder="密码：">
+                                    </div>
+                                    <div id="need_captcha" class="need_captcha">
+                                        <div class="top_click" name="div_top_click">
+                                            <!-- no delete -->
+                                        </div>
+                                        <div class="yanzhengma">
+                                            <div class="top-login-bg2">
+                                                <label>验证码：</label>
+                                                <input class="top_loginmm" name="authnum" maxlength="4" type="text">
+                                                <span class="register_captcha_span" style="margin:0; position: relative;">
+                                                    <img name="login_img" class="login_img">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input class="dr_anniu form-submit" type="button" name="login" value="登录">
+                                    <input class="dr_anniu reg_anniu" type="button" onclick="" >
+                                </div>
+                                <input type="hidden" name="ref_url" value="">
+                                <input type="hidden" name="form_submit" value="ok">
+                                <input type="hidden" name="formhash" value="">
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                    <div id="header_user" class="logxinxi" hidden="">
+                        <div class="top_login">
+                            <span>您好，<a onclick="" rel="nofollow" class="play-jl" target="_blank" name="user_name"></a></span>
+                            <span>可用余额：</span>
+                            <span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span><span id="header_money_refresh"><i class="icon-refresh-icon"></i></span></a>
+                            </span>
+                            <span></span>
+                            <span>
+                                    &nbsp;|&nbsp;
+                                    <a onclick="" >用户中心</a>&nbsp;|&nbsp;
+                                    <a onclick="" >充值</a>&nbsp;|&nbsp;
+                                    <a onclick="" >提现</a>&nbsp;|&nbsp;
+                                    <a onclick="" >交易记录</a>&nbsp;|&nbsp;
+                                    <a onclick="" >个人消息</a>&nbsp;|&nbsp;
+                                <a onclick="" >退出</a>&nbsp;
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-navbar-plus">
+                <div class="wrapper clearfix" id="header_box">
+                    <div class="lottery-plus" id="lotterys">
+                        <h2>选择彩种 <a class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+                        <div class="lotterys-list-hd" id="lotterysList" style="display:none">
+                            <ul class="lottery-list-box" id="lottery-list-box">
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/5.png"></i><span class="color333">重庆时时彩</span></a><a onclick="" target="_blank" class="status-desc">最火爆的快彩</a></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/9.png"></i><span class="color333">北京PK拾</span></a><span class="normal-desc">彩友中200注</span></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/18.png"></i><span class="color333">香港⑥合彩</span></a><span class="normal-desc">每周开奖三期</span></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/11.png"></i><span class="color333">安徽快三</span></a><span class="normal-desc">全天80期快乐猜大小</span></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/3.png"></i><span class="color333">上海时时乐</span></a><span class="normal-desc"></span></li>
+                                <li class="mainGame"><a onclick="" class="mainA"><i class="icon nav40-9"><img src="images/4.png"></i><span class="color333">天津时时彩</span></a>
+                                    <a onclick="" class="status-desc"></a>
+                                </li>
+                                <li class="allGames clearfix" data-type="1">
+                                    <h3><span>高频彩</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="" >三分时时彩</a></li>
+                                        <li><a onclick="" >重庆时时彩</a></li>
+                                        <li><a onclick="" >北京PK拾</a></li>
+                                        <li><a onclick="" >新加坡28</a></li>
+                                        <li><a onclick="" >三分PK拾</a></li>
+                                        <li><a onclick="" >上海时时乐</a></li>
+                                    </ul><i class="icon" id="open-btn-1" style="display: block;"></i>
+                                    <div class="line-fff"></div>
+                                    <div class="moreGames clearfix" style="display: none;" id="moreGames_1">
+                                        <div class="moreGames-box fl">
+                                            <div class="otherGames num-games">
+                                                <h3>高频彩</h3>
+                                                <ol>
+                                                    <li><a onclick="" >三分时时彩</a></li>
+                                                    <li><a onclick="" >重庆时时彩</a></li>
+                                                    <li><a onclick="" >北京PK拾</a></li>
+                                                    <li><a onclick="" >新加坡28</a></li>
+                                                    <li><a onclick="" >三分PK拾</a></li>
+                                                    <li><a onclick="" >上海时时乐</a></li>
+                                                    <li><a onclick="" >天津时时彩</a></li>
+                                                    <li><a onclick="" >新疆时时彩</a></li>
+                                                    <li><a onclick="" >江苏快三</a></li>
+                                                    <li><a onclick="" >山东11选5</a></li>
+                                                    <li><a onclick="" >上海11选5</a></li>
+                                                    <li><a onclick="" >江西11选5</a></li>
+                                                    <li><a onclick="" >广东11选5</a></li>
+                                                    <li><a onclick="" >广西快三</a></li>
+                                                    <li><a onclick="" >北京28</a></li>
+                                                    <li><a onclick="" >安徽快三</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="allGames" data-type="2">
+                                    <h3><span>低频彩</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="" >香港⑥合彩</a></li>
+                                        <li><a onclick="" >福彩3D</a></li>
+                                        <li><a onclick="" >排列三</a></li>
+                                    </ul>
+                                </li>
+                                <li class="allGames clearfix" data-type="3">
+                                    <h3><span>全部</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="" >三分时时彩</a></li>
+                                        <li><a onclick="" >重庆时时彩</a></li>
+                                        <li><a onclick="" >北京PK拾</a></li>
+                                        <li><a onclick="" >新加坡28</a></li>
+                                        <li><a onclick="" >三分PK拾</a></li>
+                                        <li><a onclick="" >香港⑥合彩</a></li>
+                                    </ul><i class="icon" id="open-btn-1" style="display: block;"></i>
+                                    <div class="line-fff"></div>
+                                    <div class="moreGames clearfix" style="display: none;" id="moreGames_3">
+                                        <div class="moreGames-box fl">
+                                            <div class="otherGames num-games">
+                                                <h3>全部</h3>
+                                                <ol>
+                                                    <li><a onclick="" >三分时时彩</a></li>
+                                                    <li><a onclick="" >重庆时时彩</a></li>
+                                                    <li><a onclick="" >北京PK拾</a></li>
+                                                    <li><a onclick="" >新加坡28</a></li>
+                                                    <li><a onclick="" >三分PK拾</a></li>
+                                                    <li><a onclick="" >香港⑥合彩</a></li>
+                                                    <li><a onclick="" >上海时时乐</a></li>
+                                                    <li><a onclick="" >天津时时彩</a></li>
+                                                    <li><a onclick="" >新疆时时彩</a></li>
+                                                    <li><a onclick="" >江苏快三</a></li>
+                                                    <li><a onclick="" >山东11选5</a></li>
+                                                    <li><a onclick="" >上海11选5</a></li>
+                                                    <li><a onclick="" >江西11选5</a></li>
+                                                    <li><a onclick="" >广东11选5</a></li>
+                                                    <li><a onclick="" >广西快三</a></li>
+                                                    <li><a onclick="" >北京28</a></li>
+                                                    <li><a onclick="" >安徽快三</a></li>
+                                                    <li><a onclick="" >福彩3D</a></li>
+                                                    <li><a onclick="" >排列三</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul id="head_menu" class="nav-plus clearfix">
+                        <li><a data-url="/" onclick="" >首页</a></li>
+                        <li><a data-url="/index/lobby.html" onclick=" target="_blank">购彩大厅</a></li>
+                        <li><a data-url="/index/mobile.html" onclick="">手机购彩</a><em class="hot-icon"></em></li>
+                        <li><a data-url="/promotion/index.html" onclick="">优惠活动</a><em class="hot-icon"></em></li>
+                        <li class="on"><a data-url="/draw/index.html" onclick="" class="dropdown-desc">开奖公告</a> </li>
+                        <li><a data-url="/trend/trendList.html" onclick="">走势图表</a></li>
+                        <li><a data-url="/news/index.html" onclick="">资讯</a></li>
+                    </ul>
+                    <div class="quick-list">
+                        <a onclick="" title="联系">客服</a>
+                        <a onclick="" >帮助</a>
+                        <a onclick="" >玩法</a>
+                        <a id="agent_reg_url" onclick="" title="加入代理">代理</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="./images/draw/draw.css" type="text/css">
+    <link rel="stylesheet" href="./images/draw/draw(1).css" type="text/css">
+    <style>
+        .div_iframe {
+            height: 100%;
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .div_iframe iframe {
+            display: block;
+            margin: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <script type="text/javascript" src="./images/draw/libs.js.download"></script>
+    <script type="text/javascript" src="./images/draw/hk6Base.js.download"></script>
+    <div class="wrap-bg" style="min-height: 880px;">
+        <div class="main">
+            <ul class="cz_nav">
+                <li class="on" data-type="all"><a>全部彩种</a></li>
+                <li data-type="1"><a>时时彩(高频)</a></li>
+                <li data-type="2"><a>快三</a></li>
+                <li data-type="3"><a>11选5</a></li>
+                <li data-type="5"><a>低频彩</a></li>
+                <li data-type="6"><a>PC蛋蛋</a></li>
+            </ul>
+            <div class="clear"></div>
+            <div>
+                <div class="cz_menu">
+                    <div id="_games_1" style="position:relative;">
+                        <i><!-- 用来挡住第一个竖的 --></i>
+                        <p name="list">
+                            <a id="_menu_draw_a_1" onclick="goIframe(&#39;/draw/detailNew.html?id=1&#39;)" name="_type_5"> <span>福彩3D</span></a>
+                            <a id="_menu_draw_a_2" onclick="goIframe(&#39;/draw/detailNew.html?id=2&#39;)" name="_type_5"> <span>排列三</span></a>
+                            <a id="_menu_draw_a_3" onclick="goIframe(&#39;/draw/detailNew.html?id=3&#39;)" name="_type_1"> <span>上海时时乐</span></a>
+                            <a id="_menu_draw_a_4" onclick="goIframe(&#39;/draw/detailNew.html?id=4&#39;)" name="_type_1"> <span>天津时时彩</span></a>
+                            <a id="_menu_draw_a_5" onclick="goIframe(&#39;/draw/detailNew.html?id=5&#39;)" name="_type_1"> <span>重庆时时彩</span></a>
+                            <a id="_menu_draw_a_7" onclick="goIframe(&#39;/draw/detailNew.html?id=7&#39;)" name="_type_1"> <span>新疆时时彩</span></a>
+                            <a id="_menu_draw_a_9" onclick="goIframe(&#39;/draw/detailNew.html?id=9&#39;)" name="_type_1"> <span>北京PK拾</span></a>
+                            <a id="_menu_draw_a_10" onclick="goIframe(&#39;/draw/detailNew.html?id=10&#39;)" name="_type_2"> <span>江苏快三</span></a>
+                            <a id="_menu_draw_a_11" onclick="goIframe(&#39;/draw/detailNew.html?id=11&#39;)" name="_type_2"> <span>安徽快三</span></a>
+                            <a id="_menu_draw_a_12" onclick="goIframe(&#39;/draw/detailNew.html?id=12&#39;)" name="_type_3"> <span>山东11选5</span></a>
+                            <a id="_menu_draw_a_13" onclick="goIframe(&#39;/draw/detailNew.html?id=13&#39;)" name="_type_3"> <span>上海11选5</span></a>
+                            <a id="_menu_draw_a_14" onclick="goIframe(&#39;/draw/detailNew.html?id=14&#39;)" name="_type_3"> <span>江西11选5</span></a>
+                            <a id="_menu_draw_a_15" onclick="goIframe(&#39;/draw/detailNew.html?id=15&#39;)" name="_type_3"> <span>广东11选5</span></a>
+                            <a id="_menu_draw_a_17" onclick="goIframe(&#39;/draw/detailNew.html?id=17&#39;)" name="_type_2"> <span>广西快三</span></a>
+                            <a id="_menu_draw_a_18" onclick="goIframe(&#39;/draw/detailNew.html?id=18&#39;)" name="_type_5"> <span>香港⑥合彩</span></a>
+                            <a id="_menu_draw_a_41" onclick="goIframe(&#39;/draw/detailNew.html?id=41&#39;)" name="_type_6"> <span>北京28</span></a>
+                            <a id="_menu_draw_a_42" onclick="goIframe(&#39;/draw/detailNew.html?id=42&#39;)" name="_type_6"> <span>新加坡28</span></a>
+                            <a id="_menu_draw_a_51" onclick="goIframe(&#39;/draw/detailNew.html?id=51&#39;)" name="_type_1"> <span>三分时时彩</span></a>
+                            <a id="_menu_draw_a_52" onclick="goIframe(&#39;/draw/detailNew.html?id=52&#39;)" name="_type_1"> <span>三分PK拾</span></a>
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div id="_iframe_divs">
+
+                    <div id="_games_2" class="cz-box" style="display: block;">
+                        <div class="kj_box">
+                            <h1>最新彩票开奖结果</h1>
+                            <table cellpadding="0" cellspacing="0" class="kj_tab">
+                                <thead>
+                                    <tr class="title">
+                                        <td width="88">彩种</td>
+                                        <td width="80">期号</td>
+                                        <td width="180">开奖时间</td>
+                                        <td width="330">开奖号码</td>
+                                        <td width="110">期数(每天)</td>
+                                        <td width="78">开奖频率</td>
+                                        <td width="40">详情</td>
+                                        <td width="40">走势</td>
+                                        <td width="80">购买彩票</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="_menu_draw_b_3" name="_type_1" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=3&#39;)">上海时时乐</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=3&#39;)">20170213019</a></td>
+                                        <td>2017-02-13 19:30:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>9</span><span>0</span><span>4</span></div>
+                                        </td>
+                                        <td>23期</td>
+                                        <td>30分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=3&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_4" name="_type_1" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=4&#39;)">天津时时彩</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=4&#39;)">20170213064</a></td>
+                                        <td>2017-02-13 19:38:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>1</span><span>4</span><span>0</span><span>5</span><span>1</span></div>
+                                        </td>
+                                        <td>84期</td>
+                                        <td>10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=4&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_5" name="_type_1" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=5&#39;)">重庆时时彩</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=5&#39;)">20170213082</a></td>
+                                        <td>2017-02-13 19:40:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>3</span><span>3</span><span>3</span><span>4</span><span>4</span></div>
+                                        </td>
+                                        <td>120期</td>
+                                        <td>5/10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=5&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_7" name="_type_1" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=7&#39;)">新疆时时彩</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=7&#39;)">20170213058</a></td>
+                                        <td>2017-02-13 19:40:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>1</span><span>9</span><span>0</span><span>2</span><span>3</span></div>
+                                        </td>
+                                        <td>96期</td>
+                                        <td>10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=7&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_9" name="_type_1" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=9&#39;)">北京PK拾</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=9&#39;)">601732</a></td>
+                                        <td>2017-02-13 19:37:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>03</span><span>07</span><span>10</span><span>08</span><span>01</span><span>02</span><span>05</span><span>06</span><span>04</span><span>09</span></div>
+                                        </td>
+                                        <td>179期</td>
+                                        <td>5分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=9&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_51" name="_type_1" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=51&#39;)">三分时时彩</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=51&#39;)">20170213213</a></td>
+                                        <td>2017-02-13 19:39:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>1</span><span>3</span><span>5</span><span>6</span><span>4</span></div>
+                                        </td>
+                                        <td>420期</td>
+                                        <td>3分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=51&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_52" name="_type_1" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=52&#39;)">三分PK拾</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=52&#39;)">20170213213</a></td>
+                                        <td>2017-02-13 19:39:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>06</span><span>08</span><span>03</span><span>09</span><span>04</span><span>02</span><span>01</span><span>10</span><span>05</span><span>07</span></div>
+                                        </td>
+                                        <td>420期</td>
+                                        <td>3分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=52&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_10" name="_type_2" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=10&#39;)">江苏快三</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=10&#39;)">20170213067</a></td>
+                                        <td>2017-02-13 19:40:00</td>
+                                        <td>
+                                            <div class="ball_kuaisan"><span class="ks_ball_3">3</span><span class="ks_ball_4">4</span><span class="ks_ball_4">4</span></div>
+                                        </td>
+                                        <td>82期</td>
+                                        <td>10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=10&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_11" name="_type_2" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=11&#39;)">安徽快三</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=11&#39;)">20170213066</a></td>
+                                        <td>2017-02-13 19:40:00</td>
+                                        <td>
+                                            <div class="nodata">正在开奖...</div>
+                                        </td>
+                                        <td>80期</td>
+                                        <td>10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=11&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_17" name="_type_2" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=17&#39;)">广西快三</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=17&#39;)">20170213061</a></td>
+                                        <td>2017-02-13 19:38:00</td>
+                                        <td>
+                                            <div class="ball_kuaisan"><span class="ks_ball_1">1</span><span class="ks_ball_2">2</span><span class="ks_ball_3">3</span></div>
+                                        </td>
+                                        <td>78期</td>
+                                        <td>10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=17&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_12" name="_type_3" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=12&#39;)">山东11选5</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=12&#39;)">20170213064</a></td>
+                                        <td>2017-02-13 19:35:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>05</span><span>09</span><span>06</span><span>07</span><span>08</span></div>
+                                        </td>
+                                        <td>78期</td>
+                                        <td>10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=12&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_13" name="_type_3" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=13&#39;)">上海11选5</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=13&#39;)">20170213065</a></td>
+                                        <td>2017-02-13 19:40:00</td>
+                                        <td>
+                                            <div class="nodata">正在开奖...</div>
+                                        </td>
+                                        <td>90期</td>
+                                        <td>10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=13&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_14" name="_type_3" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=14&#39;)">江西11选5</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=14&#39;)">20170213064</a></td>
+                                        <td>2017-02-13 19:40:00</td>
+                                        <td>
+                                            <div class="nodata">正在开奖...</div>
+                                        </td>
+                                        <td>84期</td>
+                                        <td>10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=14&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_15" name="_type_3" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=15&#39;)">广东11选5</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=15&#39;)">20170213064</a></td>
+                                        <td>2017-02-13 19:40:00</td>
+                                        <td>
+                                            <div class="nodata">正在开奖...</div>
+                                        </td>
+                                        <td>84期</td>
+                                        <td>10分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=15&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_1" name="_type_5" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=1&#39;)">福彩3D</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=1&#39;)">2017036</a></td>
+                                        <td>2017-02-12 21:15:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>6</span><span>5</span><span>0</span></div>
+                                        </td>
+                                        <td>1期</td>
+                                        <td>1天</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=1&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_2" name="_type_5" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=2&#39;)">排列三</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=2&#39;)">2017036</a></td>
+                                        <td>2017-02-12 20:30:00</td>
+                                        <td>
+                                            <div class="ballbg"><span>4</span><span>7</span><span>2</span></div>
+                                        </td>
+                                        <td>1期</td>
+                                        <td>1天</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=2&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_18" name="_type_5" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=18&#39;)">香港⑥合彩</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=18&#39;)">2017017</a></td>
+                                        <td>2017-02-12 21:30:00</td>
+                                        <td>
+                                            <div class="ball_liuhecai">
+                                                <p><span class="col-21">21</span><span class="font">牛</span></p>
+                                                <p><span class="col-07">07</span><span class="font">兔</span></p>
+                                                <p><span class="col-30">30</span><span class="font">龙</span></p>
+                                                <p><span class="col-26">26</span><span class="font">猴</span></p>
+                                                <p><span class="col-47">47</span><span class="font">猪</span></p>
+                                                <p><span class="col-38">38</span><span class="font">猴</span></p>
+                                                <p><span class="col-15">15</span><span class="font">羊</span></p>
+                                            </div>
+                                        </td>
+                                        <td>1期</td>
+                                        <td>2/3天</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=18&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_41" name="_type_6" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=41&#39;)">北京28</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=41&#39;)">807161</a></td>
+                                        <td>2017-02-13 19:40:00</td>
+                                        <td>
+                                            <div class="ball_kuaisan"><span>7</span><b>+</b><span>9</span><b>+</b><span>6</span><b>=</b><span class="ball_green">22</span></div>
+                                        </td>
+                                        <td>179期</td>
+                                        <td>5分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=41&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                    <tr id="_menu_draw_b_42" name="_type_6" class="bgcolor">
+                                        <td><a class="name" onclick="goIframe(&#39;/draw/detailNew.html?id=42&#39;)">新加坡28</a></td>
+                                        <td><a onclick="goIframe(&#39;/draw/detailNew.html?id=42&#39;)">2667817</a></td>
+                                        <td>2017-02-13 19:40:00</td>
+                                        <td>
+                                            <div class="ball_kuaisan"><span>8</span><b>+</b><span>7</span><b>+</b><span>1</span><b>=</b><span class="ball_green">16</span></div>
+                                        </td>
+                                        <td>660期</td>
+                                        <td>2分</td>
+                                        <td>
+                                            <a class="c-blue blod" onclick="goIframe(&#39;/draw/detailNew.html?id=42&#39;)"><img src="./images/draw/details.gif"></a>
+                                        </td>
+                                        <td>
+                                            <a onclick=""><img src="./images/draw/zst_01.gif"></a>
+                                        </td>
+                                        <td class="b"><a onclick="" class="draw-lottery-btn">投注</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="div_iframe" name="iframe_div"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function goIframe(url) {
+            function getUrlParameterResult(paramName) {
+                var returnVal = "";
+                try {
+                    var paramUrl = url;
+                    if (paramUrl.length > 0) {
+                        paramUrl = paramUrl.replace("/draw/detailNew.html?", "");
+                        var paramUrlArray = paramUrl.split("&");
+                        for (var i = 0; i < paramUrlArray.length; i++) {
+                            if (paramUrlArray[i].toLowerCase().indexOf(paramName.toLowerCase()) != -1) {
+                                var temp = paramUrlArray[i].split("=");
+                                if (temp[0].toLowerCase() == paramName.toLowerCase()) {
+                                    returnVal = temp[1];
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                } catch (e) {}
+                return returnVal;
+            }
+            $("div[name=iframe_div]").css("height", "550px");
+            $("div[name=iframe_div]").html('<iframe src="' + url + '" name="_iframe_new_draw" scrolling="no" marginwidth="0px" marginwidth="0px" frameborder="0"  samless ></iframe>');
+            $("div[name=iframe_div]  iframe").bind("load", function() {
+                var bheight = $($("div[name=iframe_div]  iframe").get(0).contentWindow.document).find("body").height();
+                $("div[name=iframe_div]").css("height", bheight + "px");
+                window._temp_dsq_1 = setInterval(function() {
+                    var h2 = $($("div[name=iframe_div]  iframe").get(0).contentWindow.document).find("body").height();
+                    if (h2 > bheight) {
+                        $("div[name=iframe_div]").css("height", h2 + "px");
+                    }
+                }, 100);
+                setTimeout(function() {
+                    clearInterval(_temp_dsq_1);
+                }, 2500);
+            });
+            $("#_games_2").hide();
+            $("div[name=iframe_div]").show();
+
+            var id = getUrlParameterResult("id", url) ? getUrlParameterResult("id", url) : getUrlParameterResult("id", url);
+            var getalllist = $('[name="list"] > a', window.parent.document);
+            var dataList = getalllist.map(function() {
+                if ($(this)[0].id == '_menu_draw_a_' + id) {
+                    $(this).addClass("current");
+                } else {
+                    $(this).removeClass("current");
+                }
+            }).get();
+        }
+
+        $(function() {
+            $('.main').find('.cz_nav').find('li').click(function() {
+                $('.cz_nav').find('li').attr('class', '');
+                $(this).attr('class', 'on');
+                if ("all" != $(this).data("type")) {
+                    $("#_games_1 p [name] ,#_games_2 [name]").hide();
+                    $("#_games_1 [name=_type_" + $(this).data("type") + "]").show();
+                    $("#_games_2 [name=_type_" + $(this).data("type") + "]").show();
+                } else {
+                    $("#_games_1 [name] ,#_games_2 [name]").show();
+                }
+                $("#_games_2").show();
+                $("div[name=iframe_div]").hide();
+            });
+        });
+
+        $(function() {
+            //start:开奖公告列表
+            function getDateStr(sys_timestamp) {
+                var date = new Date(sys_timestamp);
+                return date.getFullYear() + "-" + ((date.getMonth() + 1) >= 10 ? (date.getMonth() + 1) : ("0" + (date.getMonth() + 1))) + "-" + (date.getDate() >= 10 ? date.getDate() : ("0" + date.getDate()));
+            }
+            (function(url) {
+                $.ajax({
+                    'url': '/draw/getTodayOpen.html',
+                    'dataType': 'json',
+                    'type': 'get'
+                }).done(function(data) {
+                    var lotterylists = '';
+                    $.each(data, function(key, value) {
+                        lotterylists += '<li id="' + value.id + '"><a onclick="" >' + value.name + '</a></li>';
+                    });
+                    $(".top_title").append('<ul class="lotterylist">' + lotterylists + '</ul>');
+                });
+
+                $.ajax({
+                    'url': url,
+                    'dataType': 'json',
+                    'type': 'get'
+                }).done(function(data) {
+                    var len = data.list.length;
+                    if (0 == len) {
+                        $("#_games_2").html("<p>暂无数据</p>");
+                        return;
+                    }
+                    // 彩种类别 （其中json的key代表 gameType ）
+                    var gameType = {
+                        "1": {
+                            name: "时时彩",
+                            htmlArr: []
+                        },
+                        "2": {
+                            name: "快三",
+                            htmlArr: []
+                        },
+                        "3": {
+                            name: "十一选5",
+                            htmlArr: []
+                        },
+                        "5": {
+                            name: "低频",
+                            htmlArr: []
+                        },
+                        "6": {
+                            name: "PC蛋蛋",
+                            htmlArr: []
+                        }
+                    };
+                    var alllinkHtml = "";
+                    for (var i = 0; i < len; i++) {
+                        var one = data.list[i];
+                        var gameId = one.id;
+                        var t = one.type;
+                        if (!gameType.hasOwnProperty(t)) {
+                            continue;
+                        }
+
+                        function getBallDiv(one) {
+                            if (!one.hasOwnProperty("openNum") || "" == one.openNum) { //暂无开奖号码
+                                return "<div class='nodata'>正在开奖...</div>";
+                            }
+                            if (one.type + "" == "2") { //快三
+                                var temp = "";
+                                for (var i = 0; i < one.openNum.split("|").length; i++) {
+                                    var idx = one.openNum.split("|")[i];
+                                    temp += "<span class='ks_ball_" + idx + "'>" + idx + "</span>";
+                                }
+                                var ballDiv = '<div class="ball_kuaisan">' + temp + '</div>';
+                                return ballDiv;
+                            }
+                            if (one.id + "" == "18") { //香港六合彩
+                                var temp = "";
+                                for (var i = 0; i < one.openNum.split("|").length; i++) {
+                                    var idx = one.openNum.split("|")[i];
+                                    var sx = get_animal_by_ball_time(idx, getDateStr(parseInt("1486986071473"))); //生肖
+                                    temp += "<p><span class='col-" + idx + "'>" + idx + "</span><span class='font'>" + sx + "</span></p>";
+                                }
+                                var ballDiv = '<div class="ball_liuhecai">' + temp + '</div>';
+                                return ballDiv;
+                            }
+                            if (one.type + "" == "6" || one.id + "" == "41" || one.id + "" == "42") { //北京28
+                                function getColorClass(num) {
+                                    var ball_color = {
+                                        ",1,4,7,10,16,19,22,25,": "green",
+                                        ",2,5,8,11,17,20,23,26,": "blue",
+                                        ",3,6,9,12,15,18,21,24,": "red",
+                                        ",2,5,8,11,17,20,23,26,": "blue",
+                                        ",0,13,14,27,": "grey"
+                                    };
+                                    for (var k in ball_color) {
+                                        if (k.indexOf("," + parseInt(num) + ",") >= 0) {
+                                            return "ball_" + ball_color[k];
+                                        }
+                                    }
+                                }
+                                var temp = "<span>" + one.openNum.split("|")[0] + "</span><b>+</b><span>" + one.openNum.split("|")[1] + "</span><b>+</b><span>" + one.openNum.split("|")[2] + "</span><b>=</b><span class='" + getColorClass(one.openNum.split("|")[3]) + "'>" + one.openNum.split("|")[3] + "</span>";
+                                var ballDiv = '<div class="ball_kuaisan">' + temp + '</div>';
+                                return ballDiv;
+                            }
+                            var temp = "<span>" + one.openNum.split("|").join("</span><span>") + "</span>";
+                            var ballDiv = '<div class="ballbg">' + temp + '</div>';
+                            return ballDiv;
+                        }
+                        var drawLink = '/draw/detailNew.html?id=' + gameId;
+                        var str = '<tr id="_menu_draw_b_' + gameId + '" name="_type_' + one.type + '" class="bgcolor"><td><a class="name" onclick="goIframe(\'' + drawLink + '\')">' + one.name + '</a></td><td><a onclick="goIframe(\'' + drawLink + '\')">' + one.issue + '</a></td><td>' + one.openTime + '</td><td>' + getBallDiv(one) + '</td><td>' + one.dayPeroid + '</td><td>' + one.frequency + '</td><td><a class="c-blue blod" onclick="goIframe(\'' + drawLink + '\')"><img src="/500vip/statics/images/kj/details.gif"></a></td><td><a onclick=""><img src="/sscp/statics/images/kj/zst_01.gif"></a></td><td class="b"><a onclick="">投注</a></td></tr>';
+                        gameType[t].htmlArr.push(str);
+                        alllinkHtml += "<a id=\"_menu_draw_a_" + gameId + "\" onclick=\"goIframe('/draw/detailNew.html?id=" + gameId + "')\" name=\"_type_" + one.type + "\"> <span>" + one.name + "</span></a>";
+                    }
+                    $("#_games_1 [name=list]").html(alllinkHtml);
+                    for (var k in gameType) {
+                        $("#_games_2  table tbody").append(gameType[k].htmlArr.join(""));
+                    }
+                });
+            })('/draw/getData.html');
+        });
+    </script>
+
+    <div id="_foot_home">
+        <div class="foot_box">
+            <div class="about_box">
+                <ul class="foot_info">
+                    <li class="foot_wljc"></li>
+                    <li class="foot_wangan"></li>
+                    <li class="foot_wsjy"></li>
+                    <li class="foot_xylh"></li>
+                    <li class="foot_kxwz"></li>
+                </ul>
+                <p>2009-2017©<a>500vip彩票</a> | 客服邮箱：<a href="mailto:500vipkf@gmail.com"><span class="eng">500vipkf@gmail.com </span></a> | 客服QQ：
+                    <a href="tencent://message/?uin=917500500&amp;Site=500vip%E5%BD%A9%E7%A5%A8&amp;Menu=yes"><span class="eng">917500500</span></a> |
+                    <br><span class="">500vip彩票郑重提示：彩票有风险，投注需谨慎！</span> 不向未满18周岁的青少年出售彩票</p>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 更新浏览器 -->
+    <div class="ie-alert-wrap" style="display: none;">
+        <h1>是时候升级你的浏览器了</h1>
+        <p>你正在使用 Internet Explorer 的早期版本（IE9以下版本 或使用该内核的浏览器）。这意味着在升级浏览器前，你将无法访问此网站。</p>
+        <hr>
+        <h2>请注意：Windows XP 及 Internet Explorer 早期版本的支持已经结束</h2>
+        <p>自 2016 年 1 月 12 日起，Microsoft 不再为 IE 11 以下版本提供相应支持和更新。没有关键的浏览器安全更新，您的 PC 可能易受有害病毒、间谍软件和其他恶意软件的攻击，它们可以窃取或损害您的业务数据和信息。请参阅 <a href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support">微软对 Internet Explorer 早期版本的支持将于 2016 年 1 月 12 日结束的说明</a> 。</p>
+        <hr>
+        <h2>更先进的浏览器</h2>
+        <p>推荐使用以下浏览器的最新版本。如果你的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<b id="referrer"></b>即可。</p>
+        <ul class="browser">
+            <li class="browser-chrome"><a href="http://www.google.cn/chrome/browser/index.html?hl=zh-CN&amp;standalone=1" target="_blank"> 谷歌浏览器<span>Google Chrome</span></a></li>
+            <li class="browser-360"><a href="http://se.360.cn/" target="_blank"> 360安全浏览器 <span>360用户推荐</span></a></li>
+            <!-- 2016-08-06 -->
+            <li class="browser-firefox"><a href="http://www.firefox.com.cn/" target="_blank"> 火狐浏览器<span>Mozilla Firefox</span></a></li>
+            <li class="browser-ie"><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank"> IE浏览器<span>Internet Explorer</span></a></li>
+            <li class="browser-qq"><a href="http://browser.qq.com/" target="_blank"> QQ浏览器9 <span>全新升级版本</span></a></li>
+            <!-- 9.4.8187.400 -->
+
+            <div class="clean"></div>
+        </ul>
+        <hr>
+        <h2>为什么会出现这个页面？</h2>
+        <p>如果你不知道升级浏览器是什么意思，请请教一些熟练电脑操作的朋友。如果你使用的不是IE6/7/8/9/10，而是360浏览器、QQ浏览器、搜狗浏览器等，出现这个页面是因为你使用的不是该浏览器的最新版本，升级至最新即可。</p>
+        <hr>
+    </div>
+    <div class="ie-alert-bg" style="display: none;"></div>
+    <!-- start :  浮动图标  -->
+    <div id="_leftAD" class="_float_AD l_AD">
+        <img src="./images/float_left.png">
+        <div name="close_btn"></div>
+        <a class="top1_btn" href="tencent://message/?uin=917500500&amp;Site=500vip%E5%BD%A9%E7%A5%A8&amp;Menu=yes"></a>
+        <div class="top2_btn" onclick="" ></div>
+        <div class="two_img"><img src="./images/getAndroidPng.html"></div>
+    </div>
+    <div id="_rightAD" class="_float_AD r_AD">
+        <img src="./images/float_right.png">
+        <div name="close_btn"></div>
+        <div class="top1_btn" onclick="" ></div>
+        <div class="top2_btn" onclick="" ></div>
+        <div class="two_img"><img src="./images/getIosPng.html"></div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $("#_leftAD [name=close_btn],#_rightAD [name=close_btn]").click(function() {
+                $(this).parent().hide();
+            });
+        });
+    </script>
+    <!-- end :  浮动图标  -->
+
+    <!-- 倒计时维护 -->
+    <div class="maintain-countdown" style="display: none;">
+        <div class="maintain-time" id="main_count_down">
+            维护倒计时
+            <br>
+            <div id="mian_time"></div>
+        </div>
+    </div>
+
+    <div id="window-resizer-tooltip" style="display: none;">
+        <a href="http://www500vip.com/draw/index.html#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1857</span> x <span class="tooltipHeight" id="winHeight">1080</span>
+        <br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1857</span> x <span class="tooltipHeight" id="vpHeight">965</span></div>
+
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/rollups/tripledes.js"></script>
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/components/mode-ecb-min.js"></script>
+    <script type="text/javascript" src="common/v.1.0.0/tcg-lib.js"></script>
+    <script type="text/javascript" src="common/v.1.0.0/rsa-lib.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-control.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-ui.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-wps.js"></script>
+    <script type="text/javascript" src="mc/v.1.0.0/mc-properties.js"></script>
+
+    <script type="text/javascript" src="ac/v.1.0.0/ac-control.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-ui.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-wps.js"></script>
+    <script type="text/javascript" src="ac/v.1.0.0/ac-properties.js"></script>
+    <script type="text/javascript" src="./js/WPS-api.js"></script>
+    <script type="text/javascript" src="./js/500vip-subcommon.js"></script>
+    <script type="text/javascript" src="./js/500vip-control.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/500vip-ui.js"></script>
+    <script type="text/javascript" src="./js/500vip-prop.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'font';
+  src:  url('../fonts/font.eot?d475y');
+  src:  url('../fonts/font.eot?d475y#iefix') format('embedded-opentype'),
+    url('../fonts/font.ttf?d475y') format('truetype'),
+    url('../fonts/font.woff?d475y') format('woff'),
+    url('../fonts/font.svg?d475y#font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-announcement:before {
+  content: "\e900";
+}
+.icon-arrow-down:before {
+  content: "\e901";
+}
+.icon-arrow-left:before {
+  content: "\e902";
+}
+.icon-arrow-right:before {
+  content: "\e903";
+}
+.icon-cart:before {
+  content: "\e904";
+}
+.icon-deposit:before {
+  content: "\e905";
+}
+.icon-e-mail:before {
+  content: "\e906";
+}
+.icon-home:before {
+  content: "\e907";
+}
+.icon-input-account:before {
+  content: "\e908";
+}
+.icon-lock:before {
+  content: "\e909";
+}
+.icon-lottery:before {
+  content: "\e90a";
+}
+.icon-online:before {
+  content: "\e90b";
+}
+.icon-personal:before {
+  content: "\e90c";
+}
+.icon-promotions:before {
+  content: "\e90d";
+}
+.icon-recond:before {
+  content: "\e90e";
+}
+.icon-trend:before {
+  content: "\e90f";
+}
+.icon-unlock:before {
+  content: "\e910";
+}
+.icon-Winning:before {
+  content: "\e911";
+}
+.icon-user:before {
+  content: "\e976";
+}
+

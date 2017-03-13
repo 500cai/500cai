@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<div class="jlo dpst-rel-content clearfix">
+		<ul id="depositRel" class="tabs clearfix">
+			<li>
+				<label for="tab1" class="sel tab-btn" data-rel="tab-content1">充值流程</label>
+				<div id="tab-content1" class="tab-content">
+					<p>您好，成功登录平台，点击平台页面 “充值”选择您要充值的支付方式，输入您要充值的金额，选择您的充值银行，确认提交充值申请，即可申请充值。</p>
+				</div>
+			</li>
+		  
+			<li>
+				<label for="tab2" class="unsel tab-btn" data-rel="tab-content2">查询流程</label>
+				<div id="tab-content2" class="tab-content">
+					<p>您好，成功登录平台，点击平台页面 “充值”选择 “选款记录” ，选择您要查询的状态，支付方式以及日期，点击 “查询” 即可查看到您的充值详情。若有充值不到账问题，请您及时联系在线客服。</p>	
+				</div>
+			</li>
+		  
+			<li>
+				<label for="tab3" class="unsel tab-btn" data-rel="tab-content3">充值类</label>
+				<div id="tab-content3" class="tab-content">
+					<div class="accordions">
+						<h3>支持信用卡充值吗？</h3>
+						<div>
+							<p>平台目前不支持信用卡，推荐您使用快捷支付功能进行充值，感谢您的理解与配合。</p>
+						</div>
+						
+						<h3>支持手机充值吗？</h3>
+						<div>
+							<p>平台目前不支持手机充值，推荐您使用快捷支付功能进行充值，感谢您的理解与配合。</p>
+						</div>
+						
+						<h3>充值多久到账？</h3>
+						<div>
+							<p>只要您按照网站所给指引严格进行填写相关信息，平台各个支付充值方式基本都是秒到账的，如果有网银维护平台会提前一天发出维护公告。请您充值前查看平台公告。</p>
+						</div>
+						
+						<h3>充值编号怎么查询？</h3>
+						<div>
+							<p>请您点击“充值”并选择“充值记录”，调整申请时间后点击“查询“，即可获取对应编号。</p>
+						</div>
+						
+						<h3>平台充值限额是多少？</h3>
+						<div>
+							<p>1. 快捷支付：单笔最低20元，单笔最高50,000元；</p>
+							<p>2. 网银支付：单笔最低20元，单笔最高50,000元；</p>
+							<p>3. 微信支付：单笔最低20元，单笔最高3,000元。 </p>
+						</div>
+					</div>	
+				</div>
+			</li>
+			
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+</xml>

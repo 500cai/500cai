@@ -1,0 +1,638 @@
+@charset "utf-8";
+/*------------------------------------------------------------------------------The CSS Can't' be modified------------------------------------------------------------------------------*/
+html{overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body{font-family:'MicrosoftYaHei', '微软雅黑', 'STHeitiSC';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,menu,nav,section{margin:0;padding:0}
+article,aside,footer,header,main,nav,section{display: block;}
+input,select,textarea{font-size:100%;background-color: #fff;}
+table{border-collapse:collapse;border-spacing:0}
+a,img{border:0}
+ol,ul{list-style:none}
+a:link,a:visited,a:active,a:hover{text-decoration:none;}
+body{height: 100%;}
+/*------------------------------------------------------------------------------The CSS public,Can't be modified------------------------------------------------------------------------------*/
+.hide{display: none;}
+.clear{clear: both;}
+.flex,.flex_nav{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.flex_nav{width: 100%;height: 100%;}
+.nav_flex div,.flex_child{
+    display: block;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.box_flex,.nav_flex div,.flex_child{
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.align_items,.nav_flex div,.flex_child,.donwload > .bottom{
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+}
+.justify_content,.index_nav div div,.wrapper .actions.one{
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.button{
+    border: none 0;
+    padding: .45rem .8rem;
+    text-align: center;
+    border-radius: .2rem;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.23);
+}
+.box_sizing *{-webkit-box-sizing:border-box;box-sizing: border-box;}
+.absolute{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+header.header{
+	width: 100%;
+    height: 1.2rem;
+    background: #ec2829 url(../images/logo.png) center center no-repeat;
+    background-size: auto 0.7rem;
+    z-index: 9;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    right: 0;
+}
+header.header .nav {
+    width: 100%;
+    height: 1.2rem;
+    position: relative;
+}
+header.header nav span{display: block;}
+header.header .left,header.header .right{
+    width: .8rem;
+    height: .8rem;
+    font-size: .38rem;
+    line-height: .8rem;
+    color: #fff;
+    position: absolute;
+    top: 0.25rem;
+}
+header.header .left{left: .6rem;}
+header.header .right{right: .6rem;}
+section.central {
+    background: white;
+    padding: 1.2rem 0 1.5rem;
+    overflow: hidden;
+}
+.central_body {
+    width: 100%;
+    position: relative;
+}
+footer.footer{
+    background-color: rgb(23, 23, 23);
+    border-top: 1px solid rgba(23, 23, 23);
+    height: 1.5rem;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+footer.footer .nav div{
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+footer.footer .nav div span{display: block;}
+footer.footer .nav div span:first-child {
+    font-size: .7rem;
+    line-height: .53rem;
+    margin: .16rem;
+}
+footer.footer .nav div span:last-child {font-size: .36rem;}
+footer.footer .nav div {color: #98989a;}
+footer.footer .nav .active{color: #f7c707;}
+/*------------------------------------------------------------------------------The CSS For The Slider------------------------------------------------------------------------------*/
+.m-scooch-photos {
+    margin: 0;
+    padding: 0;
+}
+.m-scooch {
+    position: relative;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    height: 3.83rem;
+}
+.m-scooch-inner {
+    position: relative;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 0;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -ms-transition-property: -ms-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: cubic-bezier(.33,.66,.66,1);
+    -moz-transition-timing-function: cubic-bezier(.33,.66,.66,1);
+    -ms-transition-timing-function: cubic-bezier(.33,.66,.66,1);
+    -o-transition-timing-function: cubic-bezier(.33,.66,.66,1);
+    transition-timing-function: cubic-bezier(.33,.66,.66,1);
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+}
+.m-scooch.m-fluid>.m-scooch-inner>* {
+    width: 100%;
+    height: 3.83rem;
+}
+.m-fluid .m-item {
+    margin-right: 0;
+}
+.m-fluid>.m-scooch-inner>* {
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.m-scooch .m-item {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+}
+.m-scooch img {
+    -ms-interpolation-mode: bicubic;
+}
+.m-scooch-inner>* {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    font-size: 16px;
+}
+/*------------------------------------------------------lobby-------------------------------------------------------------------*/
+#personal_iframe,#lottery{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border:none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.icon-personal.bet-left-back{    
+    border: 1px solid #fff;
+    border-radius: 60%;
+    text-align: center;
+    font-size: .45rem !important;
+}
+.announcement {
+  background: #ffffff none repeat scroll 0 0;
+  height: .8rem;
+  padding: .1rem .7rem;
+  border-top: 1px solid #d9d9d9;
+  border-bottom:1px solid #d9d9d9;
+}
+
+.announcement-content {
+  color: #5a5a5a;
+  display: inline-block;
+  font-size: .4rem;
+  line-height: .6rem;
+  vertical-align: -webkit-baseline-middle;
+  width:90%;
+  overflow:hidden
+}
+.announcement-content #marquee span {
+  color: #e9e9e9;
+  font-size: .32rem !important;
+}
+.div-popular,.div-winning{
+    height: 0.8rem;
+    background: #f4f4f4;
+}
+.div-popular div,.div-winning div{
+    font-size: 0.48rem;
+    margin-left: 0.33rem;
+    padding: 0.12rem 0 0.2rem;
+}
+.game-content{
+    position: relative;
+    height: 2.6rem;
+}
+.game-content.border-mid{
+    border-bottom: 1px solid #d9d9d9;
+    /*border-top: 1px solid #d9d9d9;*/
+}
+.game-content > div {
+    display: inline-block;
+    width: 32%;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    height: 2.6rem;
+}
+
+.border{
+    border-left: 0.03rem solid #d9d9d9;
+    height: 2.4rem !important;
+    margin: 0.1rem 0;
+}
+.game-content > div > div{
+    height: 2rem;
+    width: 1.97rem;
+    position: relative;
+    margin: 0.2rem auto;
+}
+.game-content > div > div p{
+    text-align: center;
+    margin-top: 0.2rem;
+    font-size: 0.3rem;
+    font-family: 'SimHei Regular';
+}
+.all-games{
+    height: 1.5rem;
+    width: 2rem;
+    background-size: 1.45rem !important;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.BJPK10{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/BJPK10.png') !important;}
+.BJSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/BJSSC.png') !important;}
+.CQSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/CQSSC.png') !important;}
+.FC3D{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/FC3D.png') !important;}
+.GD11X5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/GD11X5.png') !important;}
+.HLJSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/HLJSSC.png') !important;}
+.JX11X5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/JX11X5.png') !important;}
+.KRSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/KRSSC.png') !important;}
+.SD11X5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/SD11X5.png') !important;}
+.TCP3P5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/TCP3P5.png') !important;}
+.TJSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/TJSSC.png') !important;}
+.TWSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/TWSSC.png') !important;}
+.XJSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/XJSSC.png') !important;}
+.XYPK10{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/XYPK10.png') !important;}
+.CASSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/CASSC.png') !important;}
+.T2KSSC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WCSSC.png') !important;}
+.T2KFFC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WCFFC.png') !important;}
+.T2KWFC{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WCWFC.png') !important;}
+.T2K11X5{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WC11X5.png') !important;}
+.T2KPK10{background-image: url('http://images.uxgaming.com/TCG_PROD_IMAGES/500cai_LOTTO_LOGO/500WCPK10.png') !important;}
+.all-games.game-load-more{background: url(../images/games/logo_more.png) center center no-repeat;}
+.winning-wapper{font-size: .4rem;}
+.winning-wapper > div{
+    height: .5rem;
+    width: 100%;
+    overflow: hidden;
+}
+.all-icons{    
+    font-size: 0.8rem;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.flex_nav.mid-icon div span:nth-child(2){
+    /*padding: 1.35rem 0 0.07rem;*/
+    position: relative;
+    top: 0.7rem;
+    z-index: 2;
+}
+.icon-deposit:before,.icon-recond:before,.icon-promotions:before,.icon-online:before {
+    /*padding: 0.2rem;*/
+}
+.index-center {overflow: hidden;}
+.index-center div{    
+    display: block;
+    width: 24.5%;
+    height: 1.5rem;
+    text-align: center;
+    color: #5f5f5f;
+    font-size: .4rem;
+    float: left;
+}
+.deposit i,.index-center .deposit{color: #f79047;}
+.recond i,.index-center .recond{color: #00a0ff;}
+.promotions i,.index-center .promotions{color: #ff3d3d;}
+.online i,.index-center .online{color: #47d05f;}
+.deposit,.recond,.promotions,.online{
+    margin: 0.4rem 0;
+    border-right: 0.05rem solid #ececec;
+}
+.icon-Winning{
+    font-size: 0.31rem;
+    width: 5%;
+    float: left;
+    text-align: center;
+    padding: 0.1rem 0 0 0;
+}
+.winning-wapper div span:nth-child(2){
+    padding: 0 0 0 0.2rem;
+    color: #666666;
+    width: 15%;
+    float: left;
+}
+.winning-wapper div span:nth-child(3){ 
+    padding: 0 0 0 0.23rem;
+    color: #e73939;
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+.winning-wapper div span:nth-child(4){ 
+    padding: 0 0 0 2.4rem;
+    color: #f79047;
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+.icon-announcement{
+    font-size:0.4rem;
+    vertical-align: -webkit-baseline-middle;
+    color:#3b3b3b;
+}
+.icon-arrow-right{    
+    position: absolute;
+    font-size: 0.4rem;
+    vertical-align: middle;
+    color: #939393;
+    padding: 0.1rem 0 0;
+}
+.left.icon-arrow-left{font-size: .7rem !important;top:0.3rem !important;}
+.header.login{background:#ec2829;height: 1.17rem !important;}
+/*login*/
+.login-back{color: #f5f5f5;}
+.login .nav div{    
+    color: #fff;
+    font-size: .6rem;
+    text-align: center;
+    padding: 0.15rem 0 0;
+}
+.login-div div:last-child{border:none;}
+#forgotPasswordForm .login-div{border-bottom: 1px solid #dddddd;}
+.login-div{
+    /*margin: .7rem 0 0;*/
+    border-top: 2px solid #dddddd;
+}
+.loginuser,.register-form,.free-reg{
+    height: 1.4rem;
+    border-bottom: 1px solid #dddddd;
+    margin: 0 0 0 0.5rem;
+}
+.loginpassword{
+    height: 1.33rem;
+    margin: 0 0 0 0.5rem
+}
+.login-div div,.register-form div,.free-reg div{
+    position: relative;
+}
+.register-form.added-num{height: 1.5rem !important;}
+.loginuser span.left,.loginpassword span.left,.register-form span.left,.free-reg span.left{
+    left: 0;
+    color: #ccc;
+}
+.register-form span.left,.free-reg span.left{color:#000 !important;}
+.loginuser span,.loginpassword span {
+    font-size: .8rem;
+    position: absolute;
+    top: .2rem;
+}
+.loginuser input,.loginpassword input,.register-form input,.free-reg input{
+    display: block;
+    width: 100%;
+    padding: .4rem 1.17rem;
+    border: none 0;
+    background-color: #fff;
+    font-size: 0.36rem;
+}
+.icon-arrow-down{    
+    right: 0;
+    font-size: 0.6rem !important;
+    padding-right: 0.5rem;
+    top: 0.5rem !important;
+    color: #ccc;
+}
+.actions{
+    padding: 0.27rem 0.5rem;
+    overflow: hidden;
+    font-size: 0.32rem;
+    border-top: 1px solid #dddddd;
+}
+.actions span:nth-child(1){
+    float: left;
+    color: #666;
+}
+.actions span:nth-child(2){
+    float: right;
+    color: #666;
+}
+.login-btn,.reg-btn {
+    outline: none;
+    width: 9.2rem;
+    height: 1rem;
+    border: 0;
+    border-radius: 0.05rem;
+    display: block;
+    margin: 0.53rem auto 0;
+    color: #fff;
+    font-size: 0.48rem;
+    cursor: pointer;
+}
+.login-btn{background: #f13031;}
+.reg-btn{
+    background: #fff;
+    border:1px solid #ddd;
+    color:#f13031;
+}
+.login .nav{
+    height:1.17rem !important;
+}
+.central.login-reg{
+    padding: 1.17rem 0 1.5rem;
+}
+.register-form span,.free-reg span{    
+    font-size: .4rem;
+    position: absolute;
+    top: .4rem;
+}
+.register-form input,.free-reg input{padding: .47rem 1.8rem !important;}
+.register-form.added-num input{padding: .5rem 1.8rem .5rem 2.5rem !important;}
+.register_protocol {
+    color: #666;
+    font-size: .32rem;
+}
+.register_protocol span:last-child{color: #fe0103;}
+.border-hide{border: none;}
+.actions p{color:#fe0103;}
+/*dialog popup*/
+.dialog{
+    overflow: hidden;
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.dialog{-webkit-transform: translateY(100%);transform: translateY(100%);opacity: 0;background-color: rgba(0,0,0,.77);}
+.dialog.show{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-transition: transform .3s 0s,opacity .3s;
+    transition: transform .3s 0s,opacity .3s;
+}
+.dialog .wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.dialog_main{
+    bottom: 8.73rem;
+    /*background-color: #fff;*/
+    /*border-radius: .2rem;*/
+}
+.dialog_main{
+    position: absolute;
+    left: .6rem;
+    right: .6rem;
+}
+.dialog_main{
+    /*padding: .8rem;*/
+    font-size: .4rem;
+}
+.dialog_main p{padding: 0 0 0.7rem 0.4rem;color: #666;}
+.dialog_main .actions span.determine {
+    background-color: #fff;
+    color: #005ddc;
+}
+.dialog_main .actions span {
+    display: block;
+    text-align: center;
+    /*margin-left: .5rem;*/
+    font-size: .5rem;
+    border-radius: .2rem;
+    /*padding: .28rem 0;*/
+}
+.dialog_main {
+    margin: 0 .53rem;
+    /*padding: .8rem 0;*/
+    color: #fff;
+    background-color: #fff;
+    box-shadow: 0px 13px 51px 0px rgba(0, 0, 0, 0.63);
+    /*border-radius: .2rem;*/
+    overflow: hidden;
+}
+/*promotion*/
+.promotion-back{background: rgb(243, 243, 243)!important;}
+.app-list{margin: 0.2rem 0 0;}
+.app-list-box {
+    background: #fff;
+    border: 1px solid #dddddd;
+    margin: 0 0.5rem 0.5rem;
+    box-sizing: border-box;
+    padding: 0.27rem 0.4rem 0;
+    border-radius: 0.13rem;
+    color: #666;
+    /*position: relative;*/
+}
+.list-tit p,.list-pic p {
+    font-size: .32rem;
+    color: #666;
+    line-height: 2;
+}
+.list-pic {
+    overflow: hidden;
+}
+.list-pic div{
+    display: block;
+    margin: 0.2rem 0;
+}
+.list-pic img {
+    width: 100%;
+    height: auto;
+}
+.icon-arrow-right.right-pro{
+    right: 0;
+    position: absolute;
+    top: .15rem;
+}
+.list-tit h3{
+    font-size: .34rem;
+}
+.join {
+    border-top: 1px solid #ddd;
+    margin-top: 0.05rem;
+    position: relative;
+    font-size: 0.32rem;
+}
+.accordion div{
+    padding: 0.2rem 0;
+}
+.accordion div p:first-child{
+    font-size: .30rem;
+    line-height: 1;
+}
+.accordion div p > span{
+    font-size: .28rem !important;
+    line-height: 1.5;
+}
+.accordion div p:first-child > span{background-color: #FF0000;/*position: relative;*/}
+.bullets{color: #0C1526;}
+.dy-text{
+    font-family: 微软雅黑;
+    font-size: .30rem;
+    line-height: 1;
+    font-weight: 700;
+}
+.title-1 {color: #FFFF00;}
+.accordion .bullets:before{
+    content: '\2022';
+    color: #0C1526;
+    font-size: .4rem;
+    padding: 0 0.1rem;
+    /*position: absolute;*/
+}
+.payment-div > span{background-color: #AC1AC6 !important;}
+.title-2{color: #00FF00;}
+.title-3{color:#FFFFFF;}
+.join div{
+    padding: 0.2rem 0;
+    overflow: hidden;
+}
+.join div span:first-child{float: left;}
+.join div span:last-child{float: right;}
+.contentWrp{height: 100%;}
+#personal_iframe html{overflow: hidden;}
+#loading, .tcg-loader{
+    background: url("../../images/loading.gif") no-repeat;
+    width:175px;
+    height:175px;
+}
+#liveChat{
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}

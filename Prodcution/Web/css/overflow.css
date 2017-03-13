@@ -1,0 +1,117 @@
+.divTableBody {
+	  background-color: #fff4f0 !important;
+}
+#mc_container label.sel, #mc_container label.sel:hover {
+  background: #f0f0f0 none repeat scroll 0 0;
+  border: 1px solid #bab8b8;
+  box-shadow: 0 2px 3px #b1b1b1 inset;
+}
+#mc_container .bonusDets label.sel, #mc_container .bonusDets label.sel:hover {
+  color: #ff6464;
+}
+#mc_container .pag-bnt a {
+  color: #3a3a3a;
+}
+
+#mc_container .back-to-gh2 {
+  background: #fefefe none repeat scroll 0 0;
+  box-shadow: 1px -5px 10px #E3E3E3 inset;
+  border: 1px solid #ddd;
+}
+
+/*********************************ARROW DROPDOWN*/
+#mc_container .slect-box-custom-large .chosen-drop::before {
+	border-bottom: 16px solid #313131;
+	border-left: 15px solid transparent;
+	border-right: 17px solid transparent;
+}
+#mc_container .chosen-drop:before {
+	border-bottom: 16px solid #313131;
+	border-left: 15px solid transparent;
+	border-right: 17px solid transparent;
+}
+#mc_container .dropdown-opts .arrow-up {
+	border-bottom: 10px solid #14071d;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+/************************DROPDOWN*/
+#mc_container  .slect-box-custom-medium.mem-icon2, #mc_container .slect-box-custom-large.mem-icon2,
+	#mc_container #bindCardForm .slect-box-custom-large-xl.mem-icon2.po-middle,
+	#mc_container .slect-box-custom.mem-icon2, #mc_container .slect-box-custom-xl,
+	#mc_container #bindCardForm .slect-box-custom-large.mem-icon2.po-middle
+	{
+	background: #ffffff;
+	background:	url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	box-shadow: -1px 1px 4px 1px #ebebeb;
+}
+
+/************************************************hover*/
+#mc_container  .red-up .chosen-single span {
+	color: #ff2424;
+}
+
+#mc_container  .slect-box-custom-medium.mem-icon2:hover, #mc_container .slect-box-custom-large.mem-icon2:hover,
+	#mc_container #bindCardForm .slect-box-custom-large-xl.mem-icon2.po-middle:hover,
+	#mc_container .slect-box-custom.mem-icon2:hover, #mc_container .slect-box-custom-xl:hover,
+	#mc_container #bindCardForm .slect-box-custom-large.mem-icon2.po-middle:hover
+	{
+	background: #ffffff;
+}
+
+#mc_container  .slect-box-custom-medium.mem-icon2.red-up, #mc_container .slect-box-custom-large.mem-icon2.red-up,
+	#mc_container #bindCardForm .slect-box-custom-large-xl.mem-icon2.po-middle.red-up,
+	#mc_container .slect-box-custom.mem-icon2.red-up, #mc_container .slect-box-custom-xl.red-up,
+	#mc_container #bindCardForm .slect-box-custom-large.mem-icon2.po-middle.red-up
+	{
+	background: #e6e6e6;
+	box-shadow: 0 2px 4px #D7D7D7 inset;
+}
+/******************************************** ONCLICK and ENABLE*/
+#mc_container .enable .red-border-bh, #mc_container .enable .abs-right-red,
+	#mc_container .enable .btn.mem-icon2.subMit-btn, #mc_container .enable .btn.mem-icon2.subMit-btn
+	{
+	background: #ff2424 none repeat scroll 0 0;
+	color: #fff !important;
+}
+
+#mc_container form.enable .submit-mesej .abs-right-red:active,
+	#mc_container .enable .btn.mem-icon2.subMit-btn:active, #mc_container .top-contner .abs-right-red:active,
+	#mc_container .enable .btn.mem-icon2.subMit-btn:active, #mc_container .enable .red-border-bh:active,
+	#mc_container .enable .abs-right-red:active, #mc_container .gameHistory .abs-right-red:active,
+	#changeAccountForm .abs-right-red:active,  #mc_container .mem-icon2.abs-right-red.po-middle:active{
+	background: #ce0000 none repeat scroll 0 0;
+	box-shadow: 0px 2px 7px #707070 inset;
+	color: #fff !important;
+	border: 0;
+}
+
+#mc_container .top-contner  .abs-right-red, #mc_container .enable .bindCard-content .abs-right-red,
+	#mc_container .gameHistory .abs-right-red, #changeAccountForm .abs-right-red, #mc_container .mem-icon2.abs-right-red.po-middle
+	{
+	background: #ff2323 none repeat scroll 0 0;
+	border-radius: 4px;
+}
+
+#mc_container .enable .abs-right-red .submitTable {
+	color: #fff;
+}
+#mc_container .btn.mem-icon2.subMit-btn {
+  color: #ff2424;
+}
+/*************************default*/
+#mc_container #bindCardForm .mem-icon2.abs-right-red.po-middle {
+  background: transparent none repeat scroll 0 0;
+
+}
+#mc_container #bindCardForm .enable .mem-icon2.abs-right-red.po-middle {
+  background: #ff2323;
+
+}
+#mc_container .mem-icon2.red-border-bh, #mc_container .bindCard-content .abs-right-red,
+	#mc_container .btn.mem-icon2.subMit-btn, #mc_container .submit-mesej .abs-right-red, #mc_container #bindCardForm .mem-icon2.abs-right-red.po-middle 
+	{
+	border: 3px solid #ff2424;
+	border-radius: 4px;
+}

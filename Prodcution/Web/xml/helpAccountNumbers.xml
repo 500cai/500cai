@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<div class="jlo dpst-rel-content clearfix">
+		<ul id="accntNum" class="tabs clearfix">
+			<li>
+				<label for="tab1" class="sel tab-btn" data-rel="tab-content1">忘记登录密码</label>
+				<div id="tab-content1" class="tab-content">
+					<p>您可以使用在平台绑定的邮箱找回您的登录密码。</p>
+				</div>
+			</li>
+		  
+			
+			<!--<li>
+				<label for="tab2" class="unsel tab-btn" data-rel="tab-content2">修改收款人姓名</label>
+				<div id="tab-content2" class="tab-content">
+					
+				</div>
+			</li>-->
+		  
+			<li>
+				<label for="tab3" class="unsel tab-btn" data-rel="tab-content3">帐户安全问题</label>
+				<div id="tab-content3" class="tab-content">
+					<div class="accordions">
+						<h3>忘记资金密码怎么办？</h3>
+						<div>
+							<p>您可以使用在平台设置的密保问题和绑定邮箱找回您的资金密码。</p>
+						</div>
+						
+						<h3>前台绑定的邮箱可以修改吗？</h3>
+						<div>
+							<p>为保障您的账号安全，邮箱一经挷定是无法更改的，请务必绑定真实有效的邮箱，因为邮箱是您找回资金密码的唯一途径。<p>
+						</div>
+					</div>	
+				</div>
+			</li>
+			
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+</xml>

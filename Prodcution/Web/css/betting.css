@@ -1,0 +1,64 @@
+.live-menu-wrap {
+    float: left;
+    height: auto;
+    position: relative;
+    width: 208px;
+}
+
+.live-logo {
+    cursor: pointer;
+    background: url(../images/logo1.png) center no-repeat;
+    width: 252px;
+    height: 61px;
+    margin: 16px 0 16px 15px !important;
+}
+
+.live-main-list * {
+    box-sizing: border-box;
+}
+
+.live-main-list {
+    border-right: 1px solid #ccc;
+	max-height: 880px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 400px;
+    overflow-y: hidden;
+}
+
+.live-nav {
+    position: relative;
+}
+
+.live-main-list .main-tit, .live-main-list .main-top, .icon-refresh-icon {
+    cursor: pointer;
+}
+
+.main-tit, .main-top {
+    height: 38px;
+    width: 100%;
+    background: #e7e7e7;
+    line-height: 38px;
+    color: #333;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hall-icon, .icon-star-icon, .icon-time-icon, .icon-down-icon {
+    float: left;
+    width: 22px;
+    margin: 11px 10px 0 15px;
+    font-size: 18px;
+}

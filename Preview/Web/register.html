@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://www500vip.com/register/index.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=Edge">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www500vip.com/500vip/statics/images/favicon.ico" media="screen">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+	
+    <title>注册新用户</title>
+	
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <!--[if lte IE 8]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 7]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+    <!--[if lte IE 6]><style>.ie-alert-bg,.ie-alert-wrap { display:block !important;}</style><![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/popups_model.css" />
+    <link rel="stylesheet" type="text/css" href="./skin/css/skin.css" />
+    <link rel="stylesheet" href="http://dev-libs.devsystem.com/mc/v.1.0.0/mc_lotto.css"/>
+    <link rel="stylesheet" href="http://dev-libs.devsystem.com/common/v.1.0.0/dialog_box.css"/>
+    <link media="all" href="css/500vip-icomoon.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body class="register-page" cz-shortcut-listen="true">
+    <div class="header-plus" id="header_plus">
+        <div class="header-toptray-plus" style="">
+            <div class="quick-tpis" id="sys_tip_outer">
+                <i class="icon-acc"></i>
+                <!-- 这里是跑马灯<marquee>标签，由js加入dom  -->
+                <marquee id="systemAnnouncementList" behavior="scroll"></marquee>
+            </div>
+        </div>
+        <div class="liansai-wrap" id="liansai-wrap">
+            <!-- 头部 -->
+            <div class="liansai" id="head_top">
+                <div class="wrapper clearfix relative">
+                    <div>
+                        <h1 class="sprite sprite-logo"></h1>
+                    </div>
+                    <div id="header_user_login" class="wrap-login" hidden="" style="display: block;">
+                        <div class="logxinxi" id="logxinxi">
+                            <form id="loginForm">
+                                <div class="top_login">
+                                    <div style="float:right;">
+                                        <div class="top-login-bg">
+                                            <label>用户名：</label>
+                                            <input class="top_loginip" name="username" type="text" placeholder="" />
+                                        </div>
+                                        <div class="top-login-bg">
+                                            <label>密码：</label>
+                                            <input class="top_loginip" name="password" type="password" placeholder="" />
+                                        </div>
+                                        <div id="need_captcha" class="need_captcha">
+                                            <div class="top_click captcha-wrp" name="div_top_click"></div>
+                                            <div class="yanzhengma">
+                                                <div class="top-login-bg2">
+                                                    <label>验证码：</label>
+                                                    <input class="top_loginmm" name="authnum" maxlength="4" type="text">
+                                                    <span class="register_captcha_span" style="margin:0; position: relative;" />
+                                                        <img id="loginCaptcha" class="login_img" />
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input class="dr_anniu form-submit" type="button" value="登录" />
+                                        <input class="dr_anniu reg_anniu" type="button" value="注册" />
+                                    </div>
+                                    <input type="hidden" name="ref_url" value="">
+                                    <input type="hidden" name="form_submit" value="ok">
+                                    <input type="hidden" name="formhash" value="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="header_user" class="logxinxi" hidden="" style="display: none;">
+                        <div class="top_login">
+                            <span>您好，<a onclick="__openWin(&#39;user_center&#39;,&#39;/userCenter/index.html&#39;);" rel="nofollow" class="play-jl" target="_blank" name="user_name"></a></span>
+                            <span>可用余额：</span>
+                            <span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span><span id="header_money_refresh"><i class="icon-refresh-icon"></i></span></a>
+                            </span>
+                            <span></span>
+                            <span>
+                                    &nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/userCenter/index.html&#39;);">用户中心</a>&nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/deposit/index.html&#39;);">充值</a>&nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/withdraw/index.html&#39;);">提现</a>&nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/userCenter/accountDetail.html&#39;);">交易记录</a>&nbsp;|&nbsp;
+                                    <a onclick="__openWin(&#39;user_center&#39;,&#39;/userCenter/privateMsg.html&#39;);">个人消息</a>&nbsp;|&nbsp;
+                                <a onclick="__openWin(&#39;lgOut&#39;,&#39;/index/logOut.html&#39;)">退出</a>&nbsp;
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-navbar-plus">
+                <div class="wrapper clearfix" id="header_box">
+                    <div class="lottery-plus" id="lotterys">
+                        <h2>选择彩种 <a class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+                        <div class="lotterys-list-hd" id="lotterysList" style="display:none">
+                            <ul class="lottery-list-box" id="lottery-list-box">
+                                <li class="mainGame"><a onclick="__openWin('lottery_hall','/game/cqssc.html');" class="mainA"><i class="icon nav40-9"><img src="images/5.png"></i><span class="color333">重庆时时彩</span></a><a onclick="__openWin('lottery_hall','/game/cqssc.html');" target="_blank" class="status-desc">最火爆的快彩</a></li>
+                                <li class="mainGame"><a onclick="__openWin('lottery_hall','/game/bjsc.html');" class="mainA"><i class="icon nav40-9"><img src="images/9.png"></i><span class="color333">北京PK拾</span></a><span class="normal-desc">彩友中200注</span></li>
+                                <li class="mainGame"><a onclick="__openWin('lottery_hall','/sixGame/index.html');" class="mainA"><i class="icon nav40-9"><img src="images/18.png"></i><span class="color333">香港⑥合彩</span></a><span class="normal-desc">每周开奖三期</span></li>
+                                <li class="mainGame"><a onclick="__openWin('lottery_hall','/gameKs/ahks.html');" class="mainA"><i class="icon nav40-9"><img src="images/11.png"></i><span class="color333">安徽快三</span></a><span class="normal-desc">全天80期快乐猜大小</span></li>
+                                <li class="mainGame"><a onclick="__openWin('lottery_hall','/gameSsl/index.html');" class="mainA"><i class="icon nav40-9"><img src="images/3.png"></i><span class="color333">上海时时乐</span></a><span class="normal-desc"></span></li>
+                                <li class="mainGame"><a onclick="__openWin('lottery_hall','/game/tjssc.html');" class="mainA"><i class="icon nav40-9"><img src="images/4.png"></i><span class="color333">天津时时彩</span></a>
+                                    <a onclick="__openWin('lottery_hall','/game/tjssc.html');" target="_blank" class="status-desc"></a>
+                                </li>
+                                <li class="allGames clearfix" data-type="1">
+                                    <h3><span>高频彩</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;);">重庆时时彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;);">北京PK拾</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/ahks.html&#39;);">安徽快三</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameSsl/index.html&#39;);">上海时时乐</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/tjssc.html&#39;);">天津时时彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/xjssc.html&#39;);">新疆时时彩</a></li>
+                                    </ul><i class="icon" id="open-btn-1" style="display: block;"></i>
+                                    <div class="line-fff"></div>
+                                    <div class="moreGames clearfix" style="display: none;" id="moreGames_1">
+                                        <div class="moreGames-box fl">
+                                            <div class="otherGames num-games">
+                                                <h3>高频彩</h3>
+                                                <ol>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;);">重庆时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;);">北京PK拾</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/ahks.html&#39;);">安徽快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameSsl/index.html&#39;);">上海时时乐</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/tjssc.html&#39;);">天津时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/xjssc.html&#39;);">新疆时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/jsks.html&#39;);">江苏快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sd.html&#39;);">山东11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sh.html&#39;);">上海11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/jx.html&#39;);">江西11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/gd.html&#39;);">广东11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/gxks.html&#39;);">广西快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html&#39;);">北京28</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html?gameId=42&#39;);">新加坡28</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;);">三分时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/npk10.html&#39;);">三分PK拾</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="allGames" data-type="2">
+                                    <h3><span>低频彩</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;);">香港⑥合彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/fcsd.html&#39;);">福彩3D</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/tcps.html&#39;);">排列三</a></li>
+                                    </ul>
+                                </li>
+                                <li class="allGames clearfix" data-type="3">
+                                    <h3><span>全部</span></h3>
+                                    <ul class="clearfix game-list">
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;);">重庆时时彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;);">北京PK拾</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;);">香港⑥合彩</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/ahks.html&#39;);">安徽快三</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameSsl/index.html&#39;);">上海时时乐</a></li>
+                                        <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/tjssc.html&#39;);">天津时时彩</a></li>
+                                    </ul><i class="icon" id="open-btn-1" style="display: block;"></i>
+                                    <div class="line-fff"></div>
+                                    <div class="moreGames clearfix" style="display: none;" id="moreGames_3">
+                                        <div class="moreGames-box fl">
+                                            <div class="otherGames num-games">
+                                                <h3>全部</h3>
+                                                <ol>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/cqssc.html&#39;);">重庆时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/bjsc.html&#39;);">北京PK拾</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/sixGame/index.html&#39;);">香港⑥合彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/ahks.html&#39;);">安徽快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameSsl/index.html&#39;);">上海时时乐</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/tjssc.html&#39;);">天津时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/xjssc.html&#39;);">新疆时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/jsks.html&#39;);">江苏快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sd.html&#39;);">山东11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/sh.html&#39;);">上海11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/jx.html&#39;);">江西11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/elevenGame/gd.html&#39;);">广东11选5</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameKs/gxks.html&#39;);">广西快三</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html&#39;);">北京28</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/pcdd/index.html?gameId=42&#39;);">新加坡28</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/sfssc.html&#39;);">三分时时彩</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/game/npk10.html&#39;);">三分PK拾</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/fcsd.html&#39;);">福彩3D</a></li>
+                                                    <li><a onclick="__openWin(&#39;lottery_hall&#39;,&#39;/gameFtc/tcps.html&#39;);">排列三</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul id="head_menu" class="nav-plus clearfix">
+                        <li><a data-url="/" onclick="__openWin(&#39;home&#39;,&#39;/&#39;);">首页</a></li>
+                        <li><a data-url="/index/lobby.html" onclick="__openWin(&#39;lottery_hall&#39;,&#39;/index/lobby.html&#39;);" target="_blank">购彩大厅</a></li>
+                        <li><a data-url="/index/mobile.html" onclick="__openWin(&#39;home_phone&#39;,&#39;/index/mobile.html&#39;);">手机购彩</a><em class="hot-icon"></em></li>
+                        <li><a data-url="/promotion/index.html" onclick="__openWin(&#39;home2&#39;,&#39;/promotion/index.html&#39;);">优惠活动</a><em class="hot-icon"></em></li>
+                        <li><a data-url="/draw/index.html" onclick="__openWin(&#39;home2&#39;,&#39;/draw/index.html&#39;)" class="dropdown-desc">开奖公告</a> </li>
+                        <li><a data-url="/trend/trendList.html" onclick="__openWin(&#39;home2&#39;,&#39;/trend/trendList.html&#39;)">走势图表</a></li>
+                        <li><a data-url="/news/index.html" onclick="__openWin(&#39;home2&#39;,&#39;/news/index.html&#39;)">资讯</a></li>
+                    </ul>
+                    <div class="quick-list">
+                        <a onclick="__openWin(&#39;other&#39;,window._layout.kf_url)" title="联系">客服</a>
+                        <a onclick="__openWin(&#39;home2&#39;,&#39;/helpCenter/index.html&#39;)">帮助</a>
+                        <a onclick="__openWin(&#39;home2&#39;,&#39;/rule/index.html&#39;)">玩法</a>
+                        <a id="agent_reg_url" onclick="__openWin(&#39;login&#39;,&#39;/register/agent.html&#39;)" title="加入代理">代理</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap-bg" style="min-height: 826px;">
+        <div class="wrapper">
+            <div class="reg">
+                <div class="reg-tit clearfix">
+                    <h3>用户注册</h3>
+                    <div class="fr">已有账号？<a class="orange" href="/login.html">立即登录</a></div>
+                </div>
+                <div class="reg-info" id="reg_form_1">
+                    <form id="registerForm">
+                        <ul>
+                            <li>
+                                <div class="info-left"><span class="red">* </span>用户名：</div>
+                                <div class="info-right">
+                                    <input name="username" class="reg-int" type="text" maxlength="16" />
+								</div>
+                                <div class="info-txt" id="_tips">用户名须为4-16个字母或数字</div>
+                            </li>
+                            <li>
+                                <div class="info-left"><span class="red">* </span>密码：</div>
+                                <div class="info-right">
+                                    <input name="password" class="reg-int" type="password" maxlength="12" />
+                                </div>
+                                <div class="info-txt">密码须为6-12个同时包含字母或数字的组合</div>
+                            </li>
+                            <li>
+                                <div class="info-left"><span class="red">* </span>确认密码：</div>
+                                <div class="info-right">
+                                    <input class="reg-int" maxlength="12" autocomplete="off" type="password" name="confirmPass" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-left"><span class="red">* </span>QQ号码:</div>
+                                <div class="info-right">
+                                    <input name="qq" class="reg-int" type="text" />
+								</div>
+                                <!-- <div class="info-txt" id="_tips">用户名须为4-16个字母或数字</div> -->
+                            </li>
+                            <li>
+                                <div class="info-left"><span class="red">* </span>邮箱:</div>
+                                <div class="info-right">
+                                    <input name="email" class="reg-int" type="email" />
+                                </div>
+                                <!-- <div class="info-txt">密码须为6-12个同时包含字母或数字的组合</div> -->
+                            </li>
+                            <li>
+                                <div class="info-left"><span class="red">* </span>手机号码:</div>
+                                <div class="info-right">
+                                    <input class="reg-int" type="text" name="mobile" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-left">&nbsp;</div>
+                                <div class="info-right">
+                                    <input type="checkbox" name="reg_checkbox" checked="checked" />我已看过并同意<a class="orange" target="_self" onclick="window.open(&#39;/regAgreement.html#_nofresh_&#39;,&#39;_reg_xieyi&#39;,&#39;width=1000,height=653&#39;).focus()" width="1000" height="653" border="0">《500VIP彩票网(500vip.com)网络服务协议》</a></div>
+                            </li>
+                            <li>
+                                <div class="info-left">&nbsp;</div>
+                                <div class="info-right">
+                                    <input id="btn-sub" type="button" class="submit form-submit" value="立即注册" />
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="_foot_home">
+        <div class="foot_box">
+            <div class="about_box">
+                <ul class="foot_info">
+                    <li class="foot_wljc"></li>
+                    <li class="foot_wangan"></li>
+                    <li class="foot_wsjy"></li>
+                    <li class="foot_xylh"></li>
+                    <li class="foot_kxwz"></li>
+                </ul>
+                <p>2009-2017©<a>500vip彩票</a> | 客服邮箱：<a href="mailto:500vipkf@gmail.com"><span class="eng">500vipkf@gmail.com </span></a> | 客服QQ：
+                    <a href="tencent://message/?uin=917500500&amp;Site=500vip%E5%BD%A9%E7%A5%A8&amp;Menu=yes"><span class="eng">917500500</span></a> |
+                    <br><span class="">500vip彩票郑重提示：彩票有风险，投注需谨慎！</span> 不向未满18周岁的青少年出售彩票</p>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 更新浏览器 -->
+    <div class="ie-alert-wrap" style="display: none;">
+        <h1>是时候升级你的浏览器了</h1>
+        <p>你正在使用 Internet Explorer 的早期版本（IE9以下版本 或使用该内核的浏览器）。这意味着在升级浏览器前，你将无法访问此网站。</p>
+        <hr>
+        <h2>请注意：Windows XP 及 Internet Explorer 早期版本的支持已经结束</h2>
+        <p>自 2016 年 1 月 12 日起，Microsoft 不再为 IE 11 以下版本提供相应支持和更新。没有关键的浏览器安全更新，您的 PC 可能易受有害病毒、间谍软件和其他恶意软件的攻击，它们可以窃取或损害您的业务数据和信息。请参阅 <a href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support">微软对 Internet Explorer 早期版本的支持将于 2016 年 1 月 12 日结束的说明</a> 。</p>
+        <hr>
+        <h2>更先进的浏览器</h2>
+        <p>推荐使用以下浏览器的最新版本。如果你的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<b id="referrer"></b>即可。</p>
+        <ul class="browser">
+            <li class="browser-chrome"><a href="http://www.google.cn/chrome/browser/index.html?hl=zh-CN&amp;standalone=1" target="_blank"> 谷歌浏览器<span>Google Chrome</span></a></li>
+            <li class="browser-360"><a href="http://se.360.cn/" target="_blank"> 360安全浏览器 <span>360用户推荐</span></a></li>
+            <!-- 2016-08-06 -->
+            <li class="browser-firefox"><a href="http://www.firefox.com.cn/" target="_blank"> 火狐浏览器<span>Mozilla Firefox</span></a></li>
+            <li class="browser-ie"><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank"> IE浏览器<span>Internet Explorer</span></a></li>
+            <li class="browser-qq"><a href="http://browser.qq.com/" target="_blank"> QQ浏览器9 <span>全新升级版本</span></a></li>
+            <!-- 9.4.8187.400 -->
+
+            <div class="clean"></div>
+        </ul>
+        <hr>
+        <h2>为什么会出现这个页面？</h2>
+        <p>如果你不知道升级浏览器是什么意思，请请教一些熟练电脑操作的朋友。如果你使用的不是IE6/7/8/9/10，而是360浏览器、QQ浏览器、搜狗浏览器等，出现这个页面是因为你使用的不是该浏览器的最新版本，升级至最新即可。</p>
+        <hr>
+    </div>
+    <div class="ie-alert-bg" style="display: none;"></div>
+    <!-- start :  浮动图标  -->
+    <div id="_leftAD" class="_float_AD l_AD">
+        <img src="images/float_left.png">
+        <div name="close_btn"></div>
+        <a class="top1_btn" href="tencent://message/?uin=917500500&amp;Site=500vip%E5%BD%A9%E7%A5%A8&amp;Menu=yes"></a>
+        <div class="top2_btn" onclick="__openWin('reg','/register/regPlay.html')"></div>
+        <div class="two_img"><img src="./images/getandroidpng.html"></div>
+    </div>
+    <div id="_rightAD" class="_float_AD r_AD">
+        <img src="images/float_right.png">
+        <div name="close_btn"></div>
+        <div class="top1_btn" onclick="__openWin('other','http://www.cpzxkf.com/')"></div>
+        <div class="top2_btn" onclick="__openWin('other','http://www.500vip.cc')"></div>
+        <div class="two_img"><img src="./images/getiospng.html"></div>
+    </div>
+
+    <!-- Javascript Libraries and Plugins -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/lib/jquery-tools.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-i18n/1.1.1/jquery.i18n.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://dev-libs.devsystem.com/common/v.1.0.0/jquery-ui-timepicker.js"></script>
+    <script src="http://apps.bdimg.com/libs/chosen/1.1.0/chosen.jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/rollups/tripledes.js"></script>
+    <script src="http://apps.bdimg.com/libs/crypto-js/3.1.2/components/mode-ecb-min.js"></script>
+
+    <script type="text/javascript" src="http://dev-libs.devsystem.com/common/v.1.0.0/tcg-lib.js"></script>
+    <script type="text/javascript" src="http://dev-libs.devsystem.com/common/v.1.0.0/rsa-lib.js"></script>
+    <!-- Custom Javascript -->
+    <script type="text/javascript" src="./js/WPS-api.js"></script>
+    <script type="text/javascript" src="./js/500vip-control.js"></script>
+    <script type="text/javascript" src="./js/500vip-subcommon.js"></script>
+    <script type="text/javascript" src="./js/500vip-prop.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/500vip-ui.js"></script>
+    <script type="text/javascript" src="./js/500vip-register.js"></script>
+    <script type="text/javascript">
+        register.init();
+    </script>    
+
+</body>
+</html>

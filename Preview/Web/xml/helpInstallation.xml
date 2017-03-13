@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+	<div class="jlo dpst-rel-content clearfix">
+		<ul id="installHelp" class="tabs clearfix">
+			<li>
+				<label for="tab1" class="sel tab-btn" data-rel="tab-content1">PC客户端安装</label>
+				<div id="tab-content1" class="tab-content">
+					
+				</div>
+			</li>
+			
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+</xml>
